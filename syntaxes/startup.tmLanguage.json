@@ -1,0 +1,75 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "EPICS startup files syntax",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#macros"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#other_functions"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.epics",
+					"match": "\\b(require)\\b"
+				},
+				{
+					"name": "constant.character.epics",
+					"match": "\\b(dbLoadRecords)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.epics",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [ 
+				{
+					"name": "constant.character.escape.epics",
+					"match": "\\\\.",
+					"include": "#macros"
+				}
+			]
+		},
+		"macros": {
+			"patterns": [
+				{
+					"name": "variable.parameter",
+					"match": "\\${[A-Z+a-z+0-9+_]+}"
+				}
+			]
+		},
+		"comments": {
+			"name":"comment.line.number-sign.epics",
+			"begin": "#",
+			"end": "^",
+			"patterns": [
+				{
+					"name":"constant.character.escape.epics",
+					"match": "\\\\."
+				}
+			]
+		},
+		"other_functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": "^[A-Z+a-z+0-9+_]+"
+				}
+			]
+		}
+	},
+	"scopeName": "source.epics.startup"
+}

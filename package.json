@@ -22,6 +22,12 @@
             "aliases": ["EPICS Substitutions", "Substitutions"],
             "extensions": [".substitutions", ".sub"],
             "configuration": "./language-configuration.json"
+        },
+        {
+            "id": "startup",
+            "aliases": ["EPICS Startup", "Startup"],
+            "extensions": [".cmd"],
+            "configuration": "./language-configuration.json"
         }],
         "grammars": [{
             "language": "database",
@@ -32,6 +38,11 @@
             "language": "substitutions",
             "scopeName": "source.epics.sub",
             "path": "./syntaxes/sub.tmLanguage.json"
+        },
+        {
+            "language": "startup",
+            "scopeName": "source.epics.startup",
+            "path": "./syntaxes/startup.tmLanguage.json"
         }]
     }
 }
