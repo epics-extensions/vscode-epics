@@ -1,0 +1,66 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "EPICS substitution files syntax",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#filename"
+		},
+		{
+			"include": "#macros"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.epics",
+				"match": "\\b(file)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.epics",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.epics",
+					"match": "\\\\."
+				}
+			]
+		},
+		"filename": {
+			"patterns": [{
+				"name": "entity.name.type.epics",
+				"match": "([A-Z+a-z+0-9+_]+)(.template)"
+			}]
+		},
+		"macros": {
+			"begin": "",
+			"end": "=",
+			"patterns": [{
+				"name": "variable.parameter",
+				"match": "([A-Z+a-z+0-9+_]+)"
+			}]
+		},
+		"comments": {
+			"name":"comment.line.number-sign.epics",
+			"begin": "#",
+			"end": "^",
+			"patterns": [
+				{
+					"name":"constant.character.escape.epics",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.epics.sub"
+}

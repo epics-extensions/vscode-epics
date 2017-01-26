@@ -12,15 +12,26 @@
     ],
     "contributes": {
         "languages": [{
-            "id": "epics",
-            "aliases": ["EPICS DB", "epics"],
+            "id": "database",
+            "aliases": ["EPICS Database", "DB"],
             "extensions": [".db",".template"],
+            "configuration": "./language-configuration.json"
+        },
+        {
+            "id": "substitutions",
+            "aliases": ["EPICS Substitutions", "Substitutions"],
+            "extensions": [".substitutions", ".sub"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
-            "language": "epics",
+            "language": "database",
             "scopeName": "source.epics.db",
-            "path": "./syntaxes/epics.tmLanguage.json"
+            "path": "./syntaxes/db.tmLanguage.json"
+        },
+        {
+            "language": "substitutions",
+            "scopeName": "source.epics.sub",
+            "path": "./syntaxes/sub.tmLanguage.json"
         }]
     }
 }

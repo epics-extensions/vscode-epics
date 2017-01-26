@@ -1,0 +1,86 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "EPICS database and template files syntax",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#record_types"
+		},
+		{
+			"include": "#field_types"
+		},
+		{
+			"include": "#macros"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.epics",
+					"match": "\\b(record)\\b"
+				},
+				{
+					"name": "constant.character.epics",
+					"match": "\\b(field)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.epics",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [ 
+				{
+					"name": "constant.character.escape.epics",
+					"match": "\\\\.",
+					"include": "#macros"
+				}
+			]
+		},
+		"record_types": {
+			"patterns": [
+				{
+					"name": "entity.name.type.epics",
+					"match": "\\b(aai|aao|ai|ao|aSub|bi|bo|calc|calcout|compress|dfanout|event|fanout|histogram|longin|longout|mbbi|mbbiDirect|mbbo|mbboDirect|permissive|sel|seq|state|stringin|stringout|subArray|sub|waveform)\\b"
+				}
+			]
+		},
+		"field_types": {
+			"patterns": [
+				{
+					"name": "entity.name.other.attribute-name",
+					"match": "\\b(SCAN|PINI|PHAS|EVNT|PRIO|DISV|DISA|SDIS|PROC|DISS|LSET|LCNT|PACT|FLNK|STAT|SEVR|NSTA|NSEV|ACKS|ACKT|UDF|SPVT|RSET|DSET|DPVT|TPRO|BKPT|NAME|DESC|ASG|TSE|TSEL|DTYP|MLOK|MLIS|DISP|PUTF|RPRO|ASP|PPN|PPNN|RDES|TIME|INP|DTYP|RVAL|VAL|SIMM|SIML|SVAL|SIOL|SIMS|OUT|DTYP|VAL|OVAL|RVAL|RBV|DOL|OMSL|OIF|SIMM|SIML|SIOL|SIMS|IVOA|IVOV)\\b"
+				}
+			]
+		},
+		"macros": {
+			"patterns": [
+				{
+					"name": "variable.parameter",
+					"match": "\\${[A-Z+a-z+0-9+_]+}"
+				}
+			]
+		},
+		"comments": {
+			"name":"comment.line.number-sign.epics",
+			"begin": "#",
+			"end": "^",
+			"patterns": [
+				{
+					"name":"constant.character.escape.epics",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.epics.db"
+}
