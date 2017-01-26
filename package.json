@@ -28,6 +28,12 @@
             "aliases": ["EPICS Startup", "Startup"],
             "extensions": [".cmd"],
             "configuration": "./language-configuration.json"
+        },
+        {
+            "id": "proto",
+            "aliases": ["EPICS prototypes", "Prototypes"],
+            "extensions": [".proto"],
+            "configuration": "./language-configuration.json"
         }],
         "grammars": [{
             "language": "database",
@@ -43,6 +49,11 @@
             "language": "startup",
             "scopeName": "source.epics.startup",
             "path": "./syntaxes/startup.tmLanguage.json"
+        },
+        {
+            "language": "proto",
+            "scopeName": "source.epics.proto",
+            "path": "./syntaxes/proto.tmLanguage.json"
         }]
     }
 }
