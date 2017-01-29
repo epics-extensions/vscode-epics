@@ -1,7 +1,7 @@
 {
     "name": "vscode-epics",
-    "displayName": "epics-database",
-    "description": "Colorize EPICS database and template files.",
+    "displayName": "vscode-epics",
+    "description": "EPICS syntax highlighting and tools.",
     "version": "0.0.1",
     "publisher": "nsd",
     "engines": {
