@@ -6,7 +6,7 @@ This VS Code extension provides syntax highlighting for EPICS database, template
 
 - [x] Syntax highlighting (mostly done)
 
-\!\[Syntax highlighting\]\(images/template_syntax.png\)
+![Syntax highlighting](images/template_syntax.png)
 
 - [ ] Snippets
 - [ ] Compilation facilities
