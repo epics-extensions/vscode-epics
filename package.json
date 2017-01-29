@@ -1,5 +1,5 @@
 {
-    "name": "epics-db",
+    "name": "vscode-epics",
     "displayName": "epics-database",
     "description": "Colorize EPICS database and template files.",
     "version": "0.0.1",
