@@ -1,0 +1,153 @@
+{
+    "Record Body": {
+        "prefix": "record",
+        "body": "record(${1:record_type}, \"${2:record_name}\") {\n${3}\n}",
+        "description": "Record Body"
+    },
+    "macro": {
+        "prefix": "macro",
+        "body": "\\${${1:MACRO}\\}${2}"
+    },
+
+    // fields
+
+    "generic field": {
+        "prefix": "field",
+        "body": "field(${1:field_type},\"${2:field_value}\")${3}"
+    }, 
+    "description field": {
+        "prefix": "desc",
+        "body": "field(DESC,\"${1:description}\")${2}"
+    }, 
+    "value field": {
+        "prefix": "val",
+        "body": "field(VAL,\"${1:value}\")${2}"
+    }, 
+    "precision field": {
+        "prefix": "prec",
+        "body": "field(PREC,\"${1:precision}\")${2}"
+    }, 
+    "engineering units field": {
+        "prefix": "egu",
+        "body": "field(EGU,\"${1:unit}\")${2}"
+    }, 
+    "pini field": {
+        "prefix": "pini",
+        "body": "field(PINI,\"${1:YES}${2:NO}\")${3}"
+    }, 
+    "fwd link field": {
+        "prefix": "fwd",
+        "body": "field(FLNK,\"${1:record_name}\")${2}"
+    }, 
+    "scan field": {
+        "prefix": "scan",
+        "body": "field(SCAN,\"${1:.1 second}${2:.2 second}${3:.5 second}${4:1 second}${5:2 second}${6:5 second}${7:10 second}${8:I/O Intr}${9:Event}${10:Passive}\")${11}"
+    }, 
+    "input link field": {
+        "prefix": "inp",
+        "body": "field(INP,\"${1:record_name}\")${2}"
+    }, 
+    "output link field": {
+        "prefix": "out",
+        "body": "field(OUT,\"${1:record_name}\")${2}"
+    }, 
+    "dtyp field": {
+        "prefix": "dtyp",
+        "body": "field(DTYP,\"${1:Soft Channel}${2:stream}\")${3}"
+    }, 
+    "dol field": {
+        "prefix": "dol",
+        "body": "field(DOL,\"${1:record_name}\")${2}"
+    }, 
+    "selection mechanism field": {
+        "prefix": "selm",
+        "body": "field(SELM,\"${1:All}${2:Specified}${3:Mask}\")${4}"
+    }, 
+    "omsl field": {
+        "prefix": "omsl",
+        "body": "field(OMSL,\"${1:Supervisory}${2:closed_loop}\")${3}"
+    }, 
+    "hihi alarm limit field": {
+        "prefix": "hihi",
+        "body": "field(HIHI,\"${1:float}\")${2}"
+    }, 
+    "high alarm limit field": {
+        "prefix": "high",
+        "body": "field(HIGH,\"${1:float}\")${2}"
+    }, 
+    "low alarm limit field": {
+        "prefix": "low",
+        "body": "field(LOW,\"${1:float}\")${2}"
+    }, 
+    "lolo alarm limit field": {
+        "prefix": "lolo",
+        "body": "field(LOLO,\"${1:float}\")${2}"
+    }, 
+    "hihi alarm severity field": {
+        "prefix": "hhsv",
+        "body": "field(HHSV,\"${1:NO_ALARM}${2:MINOR}${3:MAJOR}\")${4}"
+    }, 
+    "high alarm severity field": {
+        "prefix": "hsv",
+        "body": "field(HSV,\"${1:NO_ALARM}${2:MINOR}${3:MAJOR}\")${4}"
+    }, 
+    "low alarm severity field": {
+        "prefix": "lsv",
+        "body": "field(LSV,\"${1:NO_ALARM}${2:MINOR}${3:MAJOR}\")${4}"
+    }, 
+    "lolo alarm severity field": {
+        "prefix": "llsv",
+        "body": "field(LLSV,\"${1:NO_ALARM}${2:MINOR}${3:MAJOR}\")${4}"
+    }, 
+    "alarm deadband field": {
+        "prefix": "hyst",
+        "body": "field(HYST,\"${1:double}\")${2}"
+    }, 
+    "all alarms field": {
+        "prefix": "alarms",
+        "body": "field(HIHI,\"${1:float}\")\n    field(HIGH,\"${2:float}\")\n    field(LOW,\"${3:float}\")\n    field(LOLO,\"${4:float}\")\n    field(HHSV,\"${5:NO_ALARM}${6:MINOR}${7:MAJOR}\")\n    field(HSV,\"${8:NO_ALARM}${9:MINOR}${10:MAJOR}\")\n    field(LSV,\"${11:NO_ALARM}${12:MINOR}${13:MAJOR}\")\n    field(LLSV,\"${14:NO_ALARM}${15:MINOR}${16:MAJOR}\")\n    field(HYST,\"${17:double}\")${17}"
+    },
+  
+    // specific records
+  
+    "binary input": {
+        "prefix": "bi",
+        "body": "record(bi,\"${1:record_name}\") {\n    field(DESC,\"${2:description}\")\n    field(VAL,\"${3:value}\")\n    field(ONAM,\"${4:one_name}\")\n    field(ZNAM,\"${5:zero_name}\")\n}${6}"
+    },
+    "binary output": {
+        "prefix": "bo",
+        "body": "record(bo,\"${1:record_name}\") {\n    field(DESC,\"${2:description}\")\n    field(VAL,\"${3:value}\")\n    field(ONAM,\"${4:one_name}\")\n    field(ZNAM,\"${5:zero_name}\")\n}${6}"
+    },
+    "aSub Record": {
+        "prefix": "asub",
+        "body": "record(aSub,\"${1:record_name}\") {\n    field(DESC,\"${2:description}\")\n    field(SNAM,\"${3:my_asub_routine}\")\n    field(INPA,\"${4:record_name}\")\n    field(FTA,\"${5:STRING}${6:CHAR}${7:UCHAR}${8:SHORT}${9:USHORT}${10:LONG}${11:ULONG}${12:FLOAT}${13:DOUBLE}${14:ENUM}\")\n    field(NOA,\"${15:number_of_element}\")\n    field(OUTA,\"${16:record_name}\")\n    field(FTVA,\"${17:STRING}${18:CHAR}${19:UCHAR}${20:SHORT}${21:USHORT}${22:LONG}${23:ULONG}${24:FLOAT}${25:DOUBLE}${26:ENUM}\")\n    field(NOVA,\"${27:number_of_element}\")\n}${28}"
+    }, 
+    "calculation": {
+        "prefix": "calc",
+        "body": "record(calc,\"${1:record_name}\") {\n    field(DESC,\"${2:description}\")\n    field(CALC,\"${3:a+b}\")\n    field(INPA,\"${4:record_name}\")\n    field(INPB,\"${5:record_name}\")\n}${6}"
+    }, 
+    "calculation output": {
+        "prefix": "calcout",
+        "body": "record(calcout,\"${1:record_name}\") {\n    field(DESC,\"${2:description}\")\n    field(CALC,\"${3:a+b}\")\n    field(INPA,\"${4:record_name}\")\n    field(INPB,\"${5:record_name}\")\n    field(OUT,\"${6:record_name}\")\n}${7}"
+    }, 
+    "data fanout": {
+        "prefix": "dfanout",
+        "body": "record(dfanout,\"${1:record_name}\") {\n    field(DESC,\"${2:description}\")\n    field(OUTA,\"${3:record_name}\")\n    field(OUTB,\"${4:record_name}\")\n    field(DOL,\"${5:record_name}\")\n    field(OMSL,\"${6:Supervisory}${7:Closed_loop}\")\n}${8}"
+    }, 
+    "fanout": {
+        "prefix": "fanout",
+        "body": "record(fanout,\"${1:record_name}\") {\n    field(DESC,\"${2:description}\")\n    field(SELM,\"${3:All}${4:Specified}${5:Mask}\")\n    field(SELN,\"${6:1}\")\n    field(SELL,\"${7:record_name}\")\n    field(LNKA,\"${8:record_name}\")\n    field(LNKB,\"${9:record_name}\")\n}${10}"
+    }, 
+    "select": {
+        "prefix": "sel",
+        "body": "record(sel,\"${1:record_name}\") {\n    field(DESC,\"${2:description}\")\n    field(SELM,\"${3:All}${4:Specified}${5:Mask}\")\n    field(SELN,\"${6:1}\")\n    field(SELL,\"${7:record_name}\")\n    field(INPA,\"${8:record_name}\")\n    field(INPB,\"${9:record_name}\")\n    field(INPC,\"${10:record_name}\")\n}${11}"
+    }, 
+    "sequence": {
+        "prefix": "seq",
+        "body": "record(seq,\"${1:record_name}\") {\n    field(DESC,\"${2:description}\")\n    field(SELM,\"${3:All}${4:Specified}${5:Mask}\")\n    field(SELN,\"${6:1}\")\n    field(SELL,\"${7:record_name}\")\n    field(DLY1,\"${8:double}\")\n    field(DOL1,\"${9:record_name}\")\n    field(LNK1,\"${10:record_name}\")\n    field(DLY2,\"${11:double}\")\n    field(DOL2,\"${12:record_name}\")\n    field(LNK2,\"${13:record_name}\")\n}${14}"
+    }, 
+    "waveform": {
+        "prefix": "waveform",
+        "body": "record(waveform,\"${1:record_name}\") {\n    field(DESC,\"${2:description}\")\n    field(NELM,\"${3:256}\")\n    field(FTVL,\"${4:FLOAT}\")\n}${5}"
+    }
+}

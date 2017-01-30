@@ -8,7 +8,7 @@
         "vscode": "^1.5.0"
     },
     "categories": [
-        "Languages"
+        "Languages", "Snippets"
     ],
     "contributes": {
         "languages": [{
@@ -20,7 +20,7 @@
         {
             "id": "substitutions",
             "aliases": ["EPICS Substitutions", "Substitutions"],
-            "extensions": [".substitutions", ".sub"],
+            "extensions": [".substitutions", ".sub", ".subs"],
             "configuration": "./language-configuration.json"
         },
         {
@@ -54,6 +54,20 @@
             "language": "proto",
             "scopeName": "source.epics.proto",
             "path": "./syntaxes/proto.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "database",
+                "path": "./snippets/db.json"
+            },
+            {
+                "language": "startup",
+                "path": "./snippets/startup.json"
+            },
+            {
+                "language": "c",
+                "path": "./snippets/c.json"
+            }
+        ]
     }
 }

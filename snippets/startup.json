@@ -1,0 +1,18 @@
+{
+    "epicsEnvSet": {
+        "prefix": "epicsEnvSet",
+        "body": "epicsEnvSet(\"${1:MACRO}\" \"${2:MACRO_VALUE}\") ${3}"
+    },
+    "require": {
+        "prefix": "require",
+        "body": "require\t${1:module},${2:version} ${3}"
+    },
+    "dbLoadTemplate": {
+        "prefix": "dbLoadTemplate",
+        "body": "dbLoadTemplate(${1:file}) ${3}"
+    },
+    "dbLoadRecords": {
+        "prefix": "dbLoadRecords",
+        "body": "dbLoadRecords(${1:file}) ${3}"
+    }
+}

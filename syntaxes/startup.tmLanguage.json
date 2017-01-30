@@ -23,11 +23,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.epics",
-					"match": "\\b(require)\\b"
+					"match": "\\b(require|dbpf|dbtr|dbpr|dbgf)\\b"
 				},
 				{
 					"name": "constant.character.epics",
-					"match": "\\b(dbLoadRecords)\\b"
+					"match": "\\b(dbLoadRecords|dbLoadTemplate|epicsEnvSet)\\b"
 				}
 			]
 		},

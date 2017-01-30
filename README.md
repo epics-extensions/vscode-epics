@@ -4,11 +4,20 @@ This VS Code extension provides syntax highlighting for EPICS database, template
 
 ## Features
 
-- [x] Syntax highlighting (mostly done)
+- [x] Syntax highlighting for:
+  - [x] database and template files
+  - [x] substitutions files
+  - [x] startup files
+  - [x] streamdevice prototype files
 
-![Syntax highlighting](images/template_syntax.png)
+![Syntax highlighting](https://github.com/NSenaud/vscode-epics/blob/master/images/template_syntax.png)
 
-- [ ] Snippets
+- [ ] Snippets for:
+  - [x] database and template files
+  - [ ] substitutions files
+  - [x] startup files
+  - [x] C source code
+  - [ ] streamdevice prototype files
 - [ ] Compilation facilities
 
 ## Requirements
@@ -23,8 +32,6 @@ None yet!
 
 Every field types are not recognized yet, only the more commons.
 
-## Release Notes
+## Credits
 
-### 0.0.1
-
-Initial release of vscode-epics.
+Snippets are mainly coming from [language-epics](https://github.com/mmllski/language-epics) Atom plugin and [agaget](https://github.com/agaget).

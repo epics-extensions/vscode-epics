@@ -1,0 +1,11 @@
+{
+    "aSub record C header": {
+        "prefix": "asub_header",
+        "body": "#include <aSubRecord.h>\n#include <registryFunction.h>\n#include <epicsExport.h>"
+    },
+
+    "aSub Record C subroutine": {
+        "prefix": "asub_code",
+        "body": "static long ${1:my_asub_routine}(aSubRecord *precord)\n{\n    ${2:// insert code here}\n    return 0;\n}\nepicsRegisterFunction(${1:my_asub_routine});"
+    }
+}
