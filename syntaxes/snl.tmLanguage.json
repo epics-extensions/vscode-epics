@@ -9,10 +9,19 @@
             "include": "#strings"
         },
         {
+            "include": "#numbers"
+        },
+        {
             "include": "#c_style_comments"
         },
         {
             "include": "#cpp_style_comments"
+        },
+        {
+            "include": "#functions"
+        },
+        {
+            "include": "#variables"
         }
     ],
     "repository": {
@@ -20,7 +29,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.epics",
-                    "match": "\\b(assign|monitor|sync|syncq|option|ss|state|when|exit|break|continue|if|while|for|return)\\b"
+                    "match": "\\b(program|assign|to|monitor|sync|syncq|option|ss|state|when|exit|break|continue|if|else|while|for|return|switch|case|default)\\b"
                 },
                 {
                     "name": "constant.character.epics",
@@ -47,6 +56,12 @@
                 }
             ]
         },
+        "numbers": {
+            "patterns": [{
+                "name": "constant.numeric",
+                "match": "(\\d+(\\.\\d+)?)"
+            }]
+        },
         "c_style_comments": {
             "name":"comment.line.number-sign.epics",
             "begin": "/\\*",
@@ -68,6 +83,19 @@
                     "match": "\\\\."
                 }
             ]
+        },
+        "functions": {
+            "end": "\\b( )\\b?\\(",
+            "patterns": [{
+                "name": "entity.name.function",
+                "match": "(\\w+)"
+            }]
+        },
+        "variables": {
+            "patterns": [{
+                "name": "variable.name",
+                "match": "(\\w+)"
+            }]
         }
     },
     "scopeName": "source.epics.snl"
