@@ -31,7 +31,7 @@
                     "match": "\\b(char|short|int|long|unsigned char|unsigned short|unsigned int|unsigned long|int8_t|uint8_t|int16_t|uint16_t|int32_t|uint32_t|float|double|string)\\b"
                 },
                 {
-                    "name": "entity.name.method",
+                    "name": "entity.name.function",
                     "match": "\\b(delay|pvPut|pvPutComplete|pvArrayPutComplete|pvPutCancel|pvArrayPutCancel|pvGet|pvGetComplete|pvArrayGetComplete|pvGetCancel|pvArrayGetCancel|pvGetQ|pvFreeQ|pvFlushQ|pvAssign|pvAssignSubst|pvMonitor|pvArrayMonitor|pvStopMonitor|pvArrayStopMonitor|pvSync|pvArraySync|pvCount|pvStatus|pvSeverity|pvMessage|pvTimeStamp|pvAssigned|pvConnected|pvArrayConnected|pvIndex|pvFlush|pvChannelCount|pvAssignCount|pvConnectCount|efSet|efClear|efTest|efTestAndClear|macValueGet)\\b"
                 }
             ]
