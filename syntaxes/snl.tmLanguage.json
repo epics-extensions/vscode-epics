@@ -49,8 +49,8 @@
         },
         "c_style_comments": {
             "name":"comment.line.number-sign.epics",
-            "begin": "/*",
-            "end": "*/",
+            "begin": "/\\*",
+            "end": "\\*/",
             "patterns": [
                 {
                     "name":"constant.character.escape.epics",
