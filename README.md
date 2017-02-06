@@ -4,12 +4,12 @@ This VS Code extension provides syntax highlighting for EPICS database, template
 
 ## Features
 
-- [ ] Syntax highlighting for:
+- [x] Syntax highlighting for:
   - [x] database and template files
   - [x] substitutions files
   - [x] startup files
   - [x] streamdevice prototype files
-  - [ ] SNL files
+  - [x] State Notation Language (SNL) files
 
 ![Syntax highlighting](https://github.com/NSenaud/vscode-epics/blob/master/images/template_syntax.png)
 
@@ -38,7 +38,7 @@ None yet!
 
 ## Known Issues
 
-Every field types are not recognized yet, only the more commons.
+Every field types in database and template files are not recognized yet, only the more commons.
 
 ## Credits
 
