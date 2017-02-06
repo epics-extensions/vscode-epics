@@ -2,7 +2,7 @@
     "name": "vscode-epics",
     "displayName": "vscode-epics",
     "description": "EPICS syntax highlighting and tools.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "nsd",
     "engines": {
         "vscode": "^1.5.0"
@@ -15,25 +15,31 @@
             "id": "database",
             "aliases": ["EPICS Database", "DB"],
             "extensions": [".db",".template"],
-            "configuration": "./language-configuration.json"
+            "configuration": "./script-language-configuration.json"
         },
         {
             "id": "substitutions",
             "aliases": ["EPICS Substitutions", "Substitutions"],
             "extensions": [".substitutions", ".sub", ".subs"],
-            "configuration": "./language-configuration.json"
+            "configuration": "./script-language-configuration.json"
         },
         {
             "id": "startup",
             "aliases": ["EPICS Startup", "Startup"],
             "extensions": [".cmd"],
-            "configuration": "./language-configuration.json"
+            "configuration": "./script-language-configuration.json"
         },
         {
             "id": "proto",
             "aliases": ["EPICS prototypes", "Prototypes"],
             "extensions": [".proto"],
-            "configuration": "./language-configuration.json"
+            "configuration": "./script-language-configuration.json"
+        },
+        {
+            "id": "snl",
+            "aliases": ["SNL", "State Notation Language"],
+            "extensions": [".snl"],
+            "configuration": "./c-style-language-configuration.json"
         }],
         "grammars": [{
             "language": "database",
@@ -54,6 +60,11 @@
             "language": "proto",
             "scopeName": "source.epics.proto",
             "path": "./syntaxes/proto.tmLanguage.json"
+        },
+        {
+            "language": "snl",
+            "scopeName": "source.epics.snl",
+            "path": "./syntaxes/snl.tmLanguage.json"
         }],
         "snippets": [
             {

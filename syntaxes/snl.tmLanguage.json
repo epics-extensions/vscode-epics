@@ -1,0 +1,74 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "State Notation Language files syntax",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#c_style_comments"
+        },
+        {
+            "include": "#cpp_style_comments"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.epics",
+                    "match": "\\b(assign|monitor|sync|syncq|option|ss|state|when|exit|break|continue|if|while|for|return)\\b"
+                },
+                {
+                    "name": "constant.character.epics",
+                    "match": "\\b(enum|struct|union|typename|typedef|void|sizeof)\\b"
+                },
+                {
+                    "name": "entity.name.type",
+                    "match": "\\b(char|short|int|long|unsigned char|unsigned short|unsigned int|unsigned long|int8_t|uint8_t|int16_t|uint16_t|int32_t|uint32_t|float|double|string)\\b"
+                },
+                {
+                    "name": "entity.name.method",
+                    "match": "\\b(delay|pvPut|pvPutComplete|pvArrayPutComplete|pvPutCancel|pvArrayPutCancel|pvGet|pvGetComplete|pvArrayGetComplete|pvGetCancel|pvArrayGetCancel|pvGetQ|pvFreeQ|pvFlushQ|pvAssign|pvAssignSubst|pvMonitor|pvArrayMonitor|pvStopMonitor|pvArrayStopMonitor|pvSync|pvArraySync|pvCount|pvStatus|pvSeverity|pvMessage|pvTimeStamp|pvAssigned|pvConnected|pvArrayConnected|pvIndex|pvFlush|pvChannelCount|pvAssignCount|pvConnectCount|efSet|efClear|efTest|efTestAndClear|macValueGet)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.epics",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.epics",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "c_style_comments": {
+            "name":"comment.line.number-sign.epics",
+            "begin": "/*",
+            "end": "*/",
+            "patterns": [
+                {
+                    "name":"constant.character.escape.epics",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "cpp_style_comments": {
+            "name":"comment.line.number-sign.epics",
+            "begin": "//",
+            "end": "^",
+            "patterns": [
+                {
+                    "name":"constant.character.escape.epics",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    },
+    "scopeName": "source.epics.snl"
+}
