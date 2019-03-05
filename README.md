@@ -42,4 +42,4 @@ Every field types are not recognized yet, only the more commons.
 
 ## Credits
 
-Snippets are mainly coming from [language-epics](https://github.com/mmllski/language-epics) Atom plugin and [agaget](https://github.com/agaget).
+Snippets are mainly coming from [language-epics](https://github.com/mmllski/language-epics) Atom plugin, [agaget](https://github.com/agaget) and [vnadot](https://github.com/vnadot).
