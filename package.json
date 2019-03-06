@@ -4,6 +4,7 @@
     "description": "EPICS syntax highlighting and tools.",
     "version": "0.0.3",
     "publisher": "nsd",
+    "extensionDependencies": ["c"],
     "engines": {
         "vscode": "^1.5.0"
     },
@@ -38,6 +39,11 @@
             "aliases": ["EPICS prototypes", "Prototypes"],
             "extensions": [".proto"],
             "configuration": "./language-configuration.json"
+        },
+        {
+            "id": "c",
+            "aliases": ["SNL"],
+            "extensions": [".st"]
         }],
         "grammars": [{
             "language": "database",
@@ -75,3 +81,4 @@
         ]
     }
 }
+
