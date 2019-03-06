@@ -2,7 +2,7 @@
     "name": "vscode-epics",
     "displayName": "vscode-epics",
     "description": "EPICS syntax highlighting and tools.",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "nsd",
     "extensionDependencies": ["c"],
     "engines": {
