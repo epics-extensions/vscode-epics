@@ -22,7 +22,7 @@
                     "    // inputs",
                     "    short inputA = *(short *)precord->a;                     // input scalar",
                     "    epicsFloat32 *inputB_array = (epicsFloat32 *)precord->b; // input array",   
-                    "    int nob      = precord->nob                              // nb of element in array (input b)",
+                    "    int nob      = precord->nob;                             // nb of element in array (input b)",
                     "    int inputC   = *(epicsUInt32 *)precord->c;",
                     "    ",
                     "    // read the whole input array (input b)",
