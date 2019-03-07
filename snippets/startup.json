@@ -1,18 +1,18 @@
 {
     "epicsEnvSet": {
-        "prefix": "epicsEnvSet",
+        "prefix": "epics.epicsEnvSet",
         "body": "epicsEnvSet(\"${1:MACRO}\" \"${2:MACRO_VALUE}\") ${3}"
     },
     "require": {
-        "prefix": "require",
+        "prefix": "epics.require",
         "body": "require\t${1:module},${2:version} ${3}"
     },
     "dbLoadTemplate": {
-        "prefix": "dbLoadTemplate",
+        "prefix": "epics.dbLoadTemplate",
         "body": "dbLoadTemplate(${1:file}) ${3}"
     },
     "dbLoadRecords": {
-        "prefix": "dbLoadRecords",
+        "prefix": "epics.dbLoadRecords",
         "body": "dbLoadRecords(${1:file}) ${3}"
     }
 }

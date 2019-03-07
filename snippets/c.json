@@ -1,13 +1,13 @@
 {
     "aSub record C header": {
-        "prefix": "asub_header",
+        "prefix": "epics.asub_header",
         "body": [   "#include <aSubRecord.h>",
                     "#include <registryFunction.h>",
                     "#include <epicsExport.h>"]
     },
 
     "aSub Record C subroutine": {
-        "prefix": "asub_code",
+        "prefix": "epics.asub_code",
         "body": [   "// most of these examples are coming from Yves Lussignol (https://drf-gitlab.cea.fr/, signalProcessingApp module)",
                     "// the goal is to provide examples of reading and writing in different variable types",
                     "static long ${1:my_asub_routine}(aSubRecord *precord){",

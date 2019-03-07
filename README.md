@@ -5,22 +5,28 @@ This VS Code extension provides syntax highlighting for EPICS database, template
 ## Features
 
 - [x] Syntax highlighting for:
-  - [x] database and template files
-  - [x] substitutions files
-  - [x] startup files
-  - [x] streamdevice prototype files
+  - [x] database and template files (.db and .template)
+  - [x] substitutions files (.substitutions, .sub, and .subs)
+  - [x] startup files (.cmd)
+  - [x] streamdevice prototype files (.proto)
   - [x] SNL files (.st extensions are considered as .c extension)
 
 ![Syntax highlighting](https://raw.githubusercontent.com/NSenaud/vscode-epics/master/images/template_syntax.png)
 
 - [ ] Snippets for:
-  - [x] database and template files
-  - [ ] substitutions files
-  - [x] startup files
-  - [x] C source code
-  - [ ] streamdevice prototype files
-  - [ ] SNL files
+  - [x] database and template files (.db and .template)
+  - [ ] substitutions files (.substitutions, .sub, and .subs)
+  - [x] startup files (.cmd)
+  - [x] C source code 
+  - [ ] streamdevice prototype files (.proto)
+  - [ ] SNL files (.st extensions are considered as .c extension)
+
+| Tips: to see all the available snippets per file type, write "epics." and a list will show up (file has to have a known extension). |
+| --- |
+
+  
 - [ ] Compilation facilities
+  
 - [ ] Linter for:
   - [ ] database and template files
   - [ ] substitutions files
