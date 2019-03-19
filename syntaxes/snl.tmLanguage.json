@@ -1,0 +1,38 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "EPICS database and template files syntax",
+    "injectionSelector": "L:source.c",
+    "scopeName": "source.epics.snl", 
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#snl_types"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.epics",
+					"match": "\\b(program|assign|state|entry|monitor|evflag|sync|include|foreign|ss)\\b"
+				},
+				{
+					"name": "keyword.control.epics3",
+					"match": "\\#"
+                }
+            ]
+        },
+        "snl_types": {
+			"patterns": [
+				{
+					"name": "storage.type",
+					"match": "\\b(string)\\b"
+				}
+			]
+		}
+	}
+}
+
+
