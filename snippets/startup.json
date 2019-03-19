@@ -1,7 +1,7 @@
 {
     "epicsEnvSet": {
         "prefix": "epics.epicsEnvSet",
-        "body": "epicsEnvSet(\"${1:MACRO}\" \"${2:MACRO_VALUE}\") ${3}"
+        "body": "epicsEnvSet(\"${1:MACRO}\", \"${2:MACRO_VALUE}\") ${3}"
     },
     "require": {
         "prefix": "epics.require",
