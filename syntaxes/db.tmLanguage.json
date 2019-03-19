@@ -1,6 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "EPICS database and template files syntax",
+	"scopeName": "source.epics.db",
 	"patterns": [
 		{
 			"include": "#keywords"
@@ -49,15 +50,15 @@
 		"record_types": {
 			"patterns": [
 				{
-					"name": "entity.name.type.epics",
-					"match": "\\b(aai|aao|ai|ao|aSub|bi|bo|calc|calcout|compress|dfanout|event|fanout|histogram|longin|longout|mbbi|mbbiDirect|mbbo|mbboDirect|permissive|sel|seq|state|stringin|stringout|subArray|sub|waveform)\\b"
+					"name": "entity.name.type.record",
+					"match": "\\b(SCAN|PINI|aai|aao|ai|ao|aSub|bi|bo|calc|calcout|compress|dfanout|event|fanout|histogram|longin|longout|mbbi|mbbiDirect|mbbo|mbboDirect|permissive|sel|seq|state|stringin|stringout|subArray|sub|waveform)\\b"
 				}
 			]
 		},
 		"field_types": {
 			"patterns": [
 				{
-					"name": "entity.name.other.attribute-name",
+					"name": "entity.name.type.field",
 					"match": "\\b(SCAN|PINI|PHAS|EVNT|PRIO|DISV|DISA|SDIS|PROC|DISS|LSET|LCNT|PACT|FLNK|STAT|SEVR|NSTA|NSEV|ACKS|ACKT|UDF|SPVT|RSET|DSET|DPVT|TPRO|BKPT|NAME|DESC|ASG|TSE|TSEL|DTYP|MLOK|MLIS|DISP|PUTF|RPRO|ASP|PPN|PPNN|RDES|TIME|INP|DTYP|RVAL|VAL|SIMM|SIML|SVAL|SIOL|SIMS|OUT|DTYP|VAL|OVAL|RVAL|RBV|DOL|OMSL|OIF|SIMM|SIML|SIOL|SIMS|IVOA|IVOV)\\b"
 				}
 			]
@@ -81,6 +82,5 @@
 				}
 			]
 		}
-	},
-	"scopeName": "source.epics.db"
+	}
 }

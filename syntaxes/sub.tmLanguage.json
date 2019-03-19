@@ -1,6 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "EPICS substitution files syntax",
+    "scopeName": "source.epics.sub",    
     "patterns": [
         {
             "include": "#keywords"
@@ -65,6 +66,5 @@
                 }
             ]
         }
-    },
-    "scopeName": "source.epics.sub"
+    }
 }
