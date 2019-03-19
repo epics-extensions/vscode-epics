@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.0.5 - 2019-03-19
+ - add module icon
+ - fix image path in ```readme.md```
+ - add "epics." for every snippet
+ - add colors and snippets in database definition files (.dbd)
+ - add keyworks to SNL files
+ - add snippets for weTest (CEA tool for acceptance tests)
+  
 ## 0.0.4 - 2019-03-06
  - add HIGH field to bo
  - add mbbi, mbbo, mbbidirect, mbbodirect records
