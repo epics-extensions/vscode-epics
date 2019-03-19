@@ -2,10 +2,10 @@
     "name": "vscode-epics",
     "displayName": "vscode-epics",
     "description": "EPICS syntax highlighting and tools.",
-    "version": "0.0.4",
+    "version": "0.0.5",
+    "extensionDependencies": ["source.c", "redhat.vscode-yaml"],
     "publisher": "nsd",
-    "icon": "images/icon.png",
-    "extensionDependencies": ["c"],
+    "icon": "./images/icon.png",
     "engines": {
         "vscode": "^1.5.0"
     },
@@ -13,38 +13,42 @@
         "type": "git",
         "url": "git@github.com:NSenaud/vscode-epics.git"
     },
-    "categories": [
-        "Languages", "Snippets"
-    ],
+    "categories": ["Programming Languages", "Snippets"],
     "contributes": {
         "languages": [{
             "id": "database",
-            "aliases": ["EPICS Database", "DB"],
+            "aliases": ["EPICS database", "DB"],
             "extensions": [".db",".template"],
             "configuration": "./language-configuration.json"
         },
         {
             "id": "substitutions",
-            "aliases": ["EPICS Substitutions", "Substitutions"],
+            "aliases": ["EPICS substitutions", "substitutions"],
             "extensions": [".substitutions", ".sub", ".subs"],
             "configuration": "./language-configuration.json"
         },
         {
             "id": "startup",
-            "aliases": ["EPICS Startup", "Startup"],
+            "aliases": ["EPICS startup", "startup"],
             "extensions": [".cmd"],
             "configuration": "./language-configuration.json"
         },
         {
             "id": "proto",
-            "aliases": ["EPICS prototypes", "Prototypes"],
+            "aliases": ["EPICS prototypes", "prototypes"],
             "extensions": [".proto"],
             "configuration": "./language-configuration.json"
         },
         {
             "id": "c",
-            "aliases": ["SNL"],
-            "extensions": [".st"]
+            "extensions": [".st"],
+            "configuration": "./language-configuration.json"
+        },
+        {
+            "id": "database definition",
+            "aliases": ["EPICS database definition", "DBD"],
+            "extensions": [".dbd"],
+            "configuration": "./language-configuration.json"
         }],
         "grammars": [{
             "language": "database",
@@ -65,6 +69,16 @@
             "language": "proto",
             "scopeName": "source.epics.proto",
             "path": "./syntaxes/proto.tmLanguage.json"
+        },
+        {
+            "injectTo": ["source.c"],
+            "scopeName": "source.epics.snl",
+            "path": "./syntaxes/snl.tmLanguage.json"
+        },
+        {
+            "language": "database definition",
+            "scopeName": "source.epics.dbd",
+            "path": "./syntaxes/dbd.tmLanguage.json"
         }],
         "snippets": [
             {
@@ -78,6 +92,14 @@
             {
                 "language": "c",
                 "path": "./snippets/c.json"
+            },
+            {
+                "language": "database definition",
+                "path": "./snippets/dbd.json"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/weTest.json"
             }
         ]
     }
