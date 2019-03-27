@@ -122,8 +122,10 @@
         "prefix": "epics.record.ai",
         "body": [   "record(ai, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
-                    "    field(INP,  \"${3:input link}\")",
-                    "}${4}"]
+                    "    field(DTYP, \"${3:Soft Channel }${4:stream}\")",
+                    "    field(SCAN, \"${5:.1 second }{6:1 second }${7:I/O Intr }${8:Event }${9:Passive}\")",
+                    "    field(INP,  \"${10:input link}\")",
+                    "}${11}"]
     },
     "analog output": {
         "prefix": "epics.record.ao",
@@ -149,7 +151,7 @@
                     "    field(ONAM, \"${4:one_name}\")",
                     "    field(ZNAM, \"${5:zero_name}\")",
                     "    field(HIGH, \"${6:seconds_to_hold_high_state}\")",
-                    "}${6}"]
+                    "}${7}"]
     },
     "aSub Record": {
         "prefix": "epics.record.asub",
@@ -200,8 +202,8 @@
                     "    field(SELM, \"${3:All }${4:Specified }${5:Mask}\")",
                     "    field(SELN, \"${6:1}\")",
                     "    field(SELL, \"${7:record_name}\")",
-                    "    field(LNKA, \"${8:record_name}\")",
-                    "    field(LNKB, \"${9:record_name}\")",
+                    "    field(LNK1, \"${8:record_name}\")",
+                    "    field(LNK2, \"${9:record_name}\")",
                     "}${10}"]
     }, 
     "select": {
@@ -330,6 +332,21 @@
                     "    field(BE,   \"${18:bit_14_value}\")",
                     "    field(BF,   \"${19:bit_15_value}\")",
                     "}${20}"]
+    },
+    "stringin": {
+        "prefix": "epics.record.stringin",
+        "body": [   "record(stringin, \"${1:record_name}\") {",
+                    "    field(DESC, \"${2:description}\")",
+                    "    field(DTYP, \"${3:Soft Channel }${4:stream}\")",
+                    "    field(INP,  \"${5:input_link}\")",
+                    "}${6}"]
+    },
+    "stringout": {
+        "prefix": "epics.record.stringout",
+        "body": [   "record(stringout, \"${1:record_name}\") {",
+                    "    field(DESC, \"${2:description}\")",
+                    "    field(OUT,  \"${3:output_link}\")",
+                    "}${4}"]
     }
 }
 
