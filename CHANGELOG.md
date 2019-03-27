@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.0.6 - 2019-03-27
+ - add some field colors (EGU, PREC ...)
+ - add snippets for substitutions files
+ - add stringin/out snippets
+ - add DTYP and SCAN field to ai record
+ - fix fanout (LNKA -> LNK1)
+
 ## 0.0.5 - 2019-03-19
  - add module icon
  - fix image path in ```readme.md```
