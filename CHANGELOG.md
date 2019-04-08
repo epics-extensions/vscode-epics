@@ -6,6 +6,7 @@
    - start all snippets with "epics."
  - change logo
  - add field colors 
+ - fix name ins sub snippet
 
 ## 0.0.6 - 2019-03-27
  - add some field colors (EGU, PREC ...)

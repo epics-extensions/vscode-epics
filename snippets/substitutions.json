@@ -1,6 +1,6 @@
 {
     "include": {
-        "prefix": "epics.substitutions",
+        "prefix": "epics.substitutions.file",
         "body": [   "file db/myDBfile.template {",
                     "    pattern { PREFIX,     SCAN }",
                     "            { ${ PREFIX } \"1 second\"}",
