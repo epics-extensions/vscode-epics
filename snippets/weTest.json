@@ -1,22 +1,21 @@
 {
     "scenario version": {
-        "prefix": "weTest.scenario.version",
+        "prefix": "epics.weTest.scenario.version",
         "body": [   "version:",
                     "  major:  \"${1:1}\"",
                     "  minor:  \"${2:0}\"",
                     "  bugfix: \"${3:0}\""]
     },
     "scenario config": {
-        "prefix": "weTest.scenario.config",
+        "prefix": "epics.weTest.scenario.config",
         "body": [   "config:",
                     "  type:   \"${1:unit} ${2:functional}\"",
                     "  name:   \"${3:my_scenario_name}\"",
                     "  prefix: \"${4:LNS-ISRC-010:}\" # PV prefix",
                     "  delay:  ${5:1} # sec"]
-    }
-    ,
+    },
     "scenario tests": {
-        "prefix": "weTest.scenario.tests",
+        "prefix": "epics.weTest.scenario.tests",
         "body": [   "tests:",
                     "  - name:     \"${1:my_sub_test}\"",
                     "    prefix:   \"${2:LNS-ISRC-010:}\"",
@@ -48,7 +47,21 @@
                     "      setter:    \"${22:VolS}\"",
                     "      value:     ${23:0} # %"]
     }
+    ,
+    "suite": {
+        "prefix": "epics.weTest.suite",
+        "body": [   "version:",
+                    "  major:  \"${1:1}\"",
+                    "  minor:  \"${2:0}\"",
+                    "  bugfix: \"${3:0}\"",
+                    "",
+                    "name: \"${4:name of the suite}\"",
+                    "",
+                    "include:",
+                    "    # ${5:description of your test xxx}",
+                    "    - '${6:xxx}.yml'",
+                    "",
+                    "    # ${7:description of your test yyy}",
+                    "    - '${8:yyy}.yml'"]
+    }
 }
-
-
-
