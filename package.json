@@ -2,10 +2,10 @@
     "name": "vscode-epics",
     "displayName": "vscode-epics",
     "description": "EPICS syntax highlighting and tools.",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "extensionDependencies": ["source.c", "redhat.vscode-yaml"],
     "publisher": "nsd",
-    "icon": "images/icon.png",
+    "icon": "images/EPICS_EYE.png",
     "engines": {
         "vscode": "^1.5.0"
     },
