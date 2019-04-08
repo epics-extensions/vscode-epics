@@ -1,6 +1,9 @@
 # Change Log
 
 ## 0.0.7 - 2019-04-08
+ - fix field colors bug
+  
+## 0.0.7 - 2019-04-08
  - we-test 
    - add suite snippets
    - start all snippets with "epics."
