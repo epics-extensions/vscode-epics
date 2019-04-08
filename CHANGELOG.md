@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.0.7 - 2019-04-08
+ - we-test 
+   - add suite snippets
+   - start all snippets with "epics."
+ - change logo
+ - add field colors 
+
 ## 0.0.6 - 2019-03-27
  - add some field colors (EGU, PREC ...)
  - add snippets for substitutions files
