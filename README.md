@@ -53,4 +53,6 @@ Snippets are mainly coming from [language-epics](https://github.com/mmllski/lang
 
 ## to do
  - bug SNL / C
+ - https://github.com/NSenaud/vscode-epics/issues/18
+ - 
 
