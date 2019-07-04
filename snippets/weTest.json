@@ -2,9 +2,9 @@
     "scenario version": {
         "prefix": "epics.weTest.scenario.version",
         "body": [   "version:",
-                    "  major:  \"${1:1}\"",
-                    "  minor:  \"${2:0}\"",
-                    "  bugfix: \"${3:0}\""]
+                    "  major:  ${1:1}",
+                    "  minor:  ${2:0}",
+                    "  bugfix: ${3:0}"]
     },
     "scenario config": {
         "prefix": "epics.weTest.scenario.config",
@@ -22,7 +22,7 @@
                     "    message:  \"${3:my_message}\"",
                     "    setter:   \"${4:VolS}\"",
                     "    getter:   \"${5:VolRB}\"",
-                    "    margin:   ${6:5 # %}",
+                    "    margin:   ${6:0} # %",
                     "    # choose between range, values and commands",
                     "    range:",
                     "      start:     ${6:0}",
@@ -35,12 +35,12 @@
                     "    commands:",
                     "      - name:      \"${13:command_name}\"",
                     "        message:   \"${14:my_message}\"",
-                    "        margin:    ${15:5} # %",
+                    "        margin:    ${15:0} # %",
                     "        setter:    \"${16:VolS}\"",
                     "        getter:    \"${17:VolRB}\"",
-                    "        get_value: ${18:20}",
-                    "        set_value: ${19:20}",
-                    "        value:     ${20:20}",
+                    "        get_value: ${18:20} # if setter and getter have different values",
+                    "        set_value: ${19:20} # if setter and getter have different values",
+                    "        value:     ${20:20} # if setter and getter have the same value",
                     "        delay:     ${21:3} # sec",
                     "      - name: ...",
                     "    finally:",
@@ -63,5 +63,35 @@
                     "",
                     "    # ${7:description of your test yyy}",
                     "    - '${8:yyy}.yml'"]
+    }
+    ,
+    "unit range": {
+        "prefix": "epics.weTest.unit.range",
+        "body": [   "  - name:    \"range of ${1:power supply voltage}\"",
+                    "    setter:  \"${2:VolS}\"",
+                    "    getter:  \"${3:VolRB}\"",
+                    "    margin:  ${4:0} # %",
+                    "    range:",
+                    "      start: ${5:0}",
+                    "      stop:  ${6:10}",
+                    "      step:  ${7:1}",
+                    "    finally:",
+                    "      value: ${8:0} # %"]
+    },
+    "unit limits": {
+        "prefix": "epics.weTest.unit.limits",
+        "body": [   "  - name:     \"limits of ${1:power supply voltage}\"",
+                    "    setter:   \"${2:VolS}\"",
+                    "    getter:   \"${3:VolRB}\"",
+                    "    margin:   ${4:0} # %",
+                    "    commands:",
+                    "      - name:      \"${5:min limit}\"",
+                    "        set_value: ${6:-1}",
+                    "        get_value: ${7:0}",
+                    "      - name:      \"${8:max limit}\"",
+                    "        set_value: ${9:11}",
+                    "        get_value: ${10:10}",
+                    "    finally:",
+                    "      value:     ${11:0} # %"]
     }
 }
