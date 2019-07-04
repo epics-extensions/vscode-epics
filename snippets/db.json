@@ -100,6 +100,18 @@
         "prefix": "epics.field.llsv",
         "body": "field(LLSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR }\")${4}"
     }, 
+    "zsv alarm severity field": {
+        "prefix": "epics.field.zsv",
+        "body": "field(ZSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR }\")${4}"
+    }, 
+    "osv alarm severity field": {
+        "prefix": "epics.field.osv",
+        "body": "field(OSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR }\")${4}"
+    }, 
+    "cosv alarm severity field": {
+        "prefix": "epics.field.cosv",
+        "body": "field(COSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR }\")${4}"
+    }, 
     "alarm deadband field": {
         "prefix": "epics.field.hyst",
         "body": "field(HYST, \"${1:double}\")${2}"
@@ -114,7 +126,10 @@
                     "field(HSV,  \"${8:NO_ALARM }${9:MINOR }${10:MAJOR}\")",
                     "field(LSV,  \"${11:NO_ALARM }${12:MINOR }${13:MAJOR}\")",
                     "field(LLSV, \"${14:NO_ALARM }${15:MINOR }${16:MAJOR}\")",
-                    "field(HYST, \"${17:double}\")${18}"]
+                    "field(ZSV,  \"${17:NO_ALARM }${18:MINOR }${19:MAJOR}\")",
+                    "field(OSV,  \"${20:NO_ALARM }${21:MINOR }${22:MAJOR}\")",
+                    "field(COSV, \"${23:NO_ALARM }${24:MINOR }${25:MAJOR}\")",
+                    "field(HYST, \"${28:double}\")${31}"]
     },
   
     // specific records
@@ -192,7 +207,7 @@
                     "    field(OUTA, \"${3:record_name}\")",
                     "    field(OUTB, \"${4:record_name}\")",
                     "    field(DOL,  \"${5:record_name}\")",
-                    "    field(OMSL, \"${6:Supervisory }${7:Closed_loop}\")",
+                    "    field(OMSL, \"${6:supervisory }${7:closed_loop}\")",
                     "}${8}"]
     }, 
     "fanout": {
