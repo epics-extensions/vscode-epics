@@ -48,7 +48,7 @@
 			"patterns": [
 				{
 					"name": "variable.parameter",
-					"match": "\\${[A-Z+a-z+0-9+_]+}"
+					"match": "\\${[A-Z+a-z+0-9+=+_]+\\}|\\$\\([A-Z+a-z+0-9+=+_]+\\)"
 				}
 			]
 		},
