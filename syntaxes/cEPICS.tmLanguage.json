@@ -1,0 +1,21 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "EPICS types",
+	"injectionSelector": "L:source.c",
+    "scopeName": "source.epics.c", 
+	"patterns": [
+		{
+			"include": "#epics_types"
+		}
+	],
+	"repository": {
+        "epics_types": {
+			"patterns": [
+				{
+					"name": "storage.type",
+					"match": "\\b(epicsInt8|epicsUInt8|epicsInt16|epicsUInt16|epicsEnum16|epicsInt32|epicsUInt32|epicsInt64|epicsUInt64|epicsFloat32|epicsFloat64|epicsString)\\b"
+				}
+			]
+		}
+	}
+}

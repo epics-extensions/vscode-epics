@@ -79,6 +79,11 @@
             "language": "database definition",
             "scopeName": "source.epics.dbd",
             "path": "./syntaxes/dbd.tmLanguage.json"
+        },
+        {
+            "injectTo": ["source.c"],
+            "scopeName": "source.epics.c",
+            "path": "./syntaxes/cEPICS.tmLanguage.json"
         }],
         "snippets": [
             {
