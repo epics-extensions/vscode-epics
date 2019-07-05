@@ -1,4 +1,4 @@
-# vscode-epics, EYE (Enlight Your Epics)
+# [vscode-epics](https://marketplace.visualstudio.com/items?itemName=nsd.vscode-epics), EYE (Enlight Your Epics)
 
 This VS Code extension provides syntax highlighting for EPICS database, template, substitutions and startup files, and streamdevice prototype files.
 
@@ -15,11 +15,11 @@ This VS Code extension provides syntax highlighting for EPICS database, template
 
 - [ ] Snippets for:
   - [x] database and template files (.db and .template)
-  - [ ] substitutions files (.substitutions, .sub, and .subs)
+  - [x] substitutions files (.substitutions, .sub, and .subs)
   - [x] startup files (.cmd)
   - [x] C source code 
   - [ ] streamdevice prototype files (.proto)
-  - [ ] SNL files (.st extensions are considered as .c extension)
+  - [x] SNL files (over charge of your .c extension)
   - [x] we-test (scenario and suite)
 
 | Tips: to see all the available snippets per file type, write "epics." and a list will show up (file has to have a known extension). |
@@ -52,5 +52,5 @@ Every field types are not recognized yet, only the more commons.
 Snippets are mainly coming from [language-epics](https://github.com/mmllski/language-epics) Atom plugin, [agaget](https://github.com/agaget) and [vnadot](https://github.com/vnadot).
 
 ## to do
- - https://github.com/NSenaud/vscode-epics/issues
+ - [issues](https://github.com/NSenaud/vscode-epics/issues)
 
