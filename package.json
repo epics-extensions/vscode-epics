@@ -105,11 +105,14 @@
             {
                 "language": "yaml",
                 "path": "./snippets/weTest.json"
-            }
-            ,
+            },
             {
                 "language": "substitutions",
                 "path": "./snippets/substitutions.json"
+            },
+            {
+                "language": "c",
+                "path": "./snippets/snl.json"
             }
         ]
     }

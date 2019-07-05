@@ -1,0 +1,27 @@
+{
+    "SNL state": {
+        "prefix": "epics.snl.state",
+        "body": [   "ss ${1:state_machine_name} {",
+                    "    state ${2:state0} {",
+                    "        when (${3:condition0)} {",
+                    "        } state ${2:state0}",
+                    "    }",
+                    "    state ${4:state1} {",
+                    "        when (${5:condition1}) {",
+                    "        } state ${4:state1}",
+                    "    }",
+                    "}"]
+    },
+    "SNL pvPut": {
+        "prefix": "epics.snl.pvPut",
+        "body": [   "pvPut(${1:pv_variable});"]
+    },
+    "SNL pvAssign": {
+        "prefix": "epics.snl.pvAssign",
+        "body": [   "pvAssign(${1:pv_variable}, \"${2:pv_name}\")"]
+    },
+    "SNL pvGet": {
+        "prefix": "epics.snl.pvGet",
+        "body": [   "pvGet(${1:pv_variable});"]
+    }
+}
