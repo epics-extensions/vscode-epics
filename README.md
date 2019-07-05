@@ -11,7 +11,7 @@ This VS Code extension provides syntax highlighting for EPICS database, template
   - [x] streamdevice prototype files (.proto)
   - [x] SNL files (.st extensions are considered as .c extension and some keywords are highlighted) 
 
-![Syntax highlighting](https://raw.githubusercontent.com/NSenaud/vscode-epics/master/images/template_syntax.png)
+![Syntax highlighting](https://raw.githubusercontent.com/NSenaud/vscode-epics/master/images/vscode_epics.gif)
 
 - [ ] Snippets for:
   - [x] database and template files (.db and .template)
