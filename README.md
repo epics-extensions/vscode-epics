@@ -52,7 +52,5 @@ Every field types are not recognized yet, only the more commons.
 Snippets are mainly coming from [language-epics](https://github.com/mmllski/language-epics) Atom plugin, [agaget](https://github.com/agaget) and [vnadot](https://github.com/vnadot).
 
 ## to do
- - bug SNL / C
- - https://github.com/NSenaud/vscode-epics/issues/18
- - 
+ - https://github.com/NSenaud/vscode-epics/issues
 

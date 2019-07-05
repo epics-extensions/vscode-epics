@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.0.8 - 2019-07-04
+ - fix startup macros
+ - add range and limit snippet for weTest
+ - add bi alarm field support
+ - debug dfanout OMSL field
+ - add EPICS types
+ - add SNL snippets
+
 ## 0.0.7 - 2019-04-08
  - fix field colors bug
   
