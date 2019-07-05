@@ -138,7 +138,7 @@
         "body": [   "record(ai, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
                     "    field(DTYP, \"${3:Soft Channel }${4:stream}\")",
-                    "    field(SCAN, \"${5:.1 second }{6:1 second }${7:I/O Intr }${8:Event }${9:Passive}\")",
+                    "    field(SCAN, \"${5:.1 second }${6:1 second }${7:I/O Intr }${8:Event }${9:Passive}\")",
                     "    field(INP,  \"${10:input link}\")",
                     "}${11}"]
     },
