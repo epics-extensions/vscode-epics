@@ -93,5 +93,15 @@
                     "        get_value: ${10:10}",
                     "    finally:",
                     "      value:     ${11:0} # %"]
+    },
+    "functional command": {
+        "prefix": "epics.weTest.functional.command",
+        "body": [   "commands:",
+                    "    - name:      \"set ${1:voltage}\"",
+                    "      setter:    \"${2:Vol}S\"",
+                    "      getter:    \"${3:Vol}Mes\"",
+                    "      margin:    ${4:0} # %",
+                    "      set_value: ${6:10}",
+                    "      get_value: ${7:10}"]
     }
 }
