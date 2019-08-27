@@ -1,0 +1,12 @@
+
+
+
+field(HIHI, "float")
+field(HIGH, "float")
+field(LOW,  "float")
+field(LOLO, "float")
+field(HHSV, "NO_ALARM MINOR MAJOR")
+field(HSV,  "NO_ALARM MINOR MAJOR")
+field(LSV,  "NO_ALARM MINOR MAJOR")
+field(LLSV, "NO_ALARM MINOR MAJOR")
+field(HYST, "double")

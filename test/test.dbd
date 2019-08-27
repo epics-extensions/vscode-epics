@@ -1,0 +1,19 @@
+
+# Record types
+include "xxxRecord.dbd"
+
+# Devices
+device(<record type>,<link type>,<dset name>,"<choice string>")
+
+# Drivers
+driver(<drvet name>)
+
+# SNL programs or functions to be invoked from iocsh
+registrar(<function name>)
+
+# Functions for sub or gensub records
+function(integrateWF)
+
+# Variables
+variable(<variable name>)
+

@@ -1,0 +1,11 @@
+
+
+commands:
+    - name:      "set voltage"
+      setter:    "VolS"
+      getter:    "VolMes"
+      margin:    0 # %
+      set_value: 10
+      get_value: 10
+
+      
