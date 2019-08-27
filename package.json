@@ -5,7 +5,7 @@
     "version": "0.0.8",
     "extensionDependencies": ["source.c", "redhat.vscode-yaml"],
     "publisher": "nsd",
-    "icon": "images/EPICS_EYE.png",
+    "icon": "images/EPICS_EYEV2_little.png",
     "engines": {
         "vscode": "^1.5.0"
     },
