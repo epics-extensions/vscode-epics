@@ -17,8 +17,8 @@
     "contributes": {
         "languages": [{
             "id": "database",
-            "aliases": ["EPICS database", "DB"],
-            "extensions": [".db",".template"],
+            "aliases": ["EPICS database", "DB", "VDB"],
+            "extensions": [".db",, ".vdb", ".template"],
             "configuration": "./language-configuration.json"
         },
         {
