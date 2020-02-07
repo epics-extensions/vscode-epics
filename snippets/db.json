@@ -1,7 +1,7 @@
 {
     "Record Body": {
         "prefix": "epics.record.record",
-        "body": [   "record(\"${1:record_type}\", \"${2:record_name}\") {",
+        "body": [   "record(${1:record_type}, \"${2:record_name}\") {",
                     "    ${3}",
                     "}${4}"]
     },
