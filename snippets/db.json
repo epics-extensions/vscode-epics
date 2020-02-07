@@ -154,19 +154,21 @@
         "body": [   "record(bi, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
                     "    field(VAL,  \"${3:value}\")",
-                    "    field(ONAM, \"${4:one_name}\")",
-                    "    field(ZNAM, \"${5:zero_name}\")",
-                    "}${6}"]
+                    "    field(ZNAM, \"${4:zero_name}\")    field(ZSV, \"${5:NO_ALARM }${6:MINOR }${7:MAJOR }\")",
+                    "    field(ONAM, \"${8:one_name}\")     field(OSV, \"${9:NO_ALARM }${10:MINOR }${11:MAJOR }\")",
+                    "    field(INP,  \"${12:input link}\")",
+                    "}${13}"]
     },
     "binary output": {
         "prefix": "epics.record.bo",
         "body": [   "record(bo, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
-                    "    field(VAL,  \"${3:value}\")",    
-                    "    field(ONAM, \"${4:one_name}\")",
-                    "    field(ZNAM, \"${5:zero_name}\")",
-                    "    field(HIGH, \"${6:seconds_to_hold_high_state}\")",
-                    "}${7}"]
+                    "    field(VAL,  \"${3:value}\")",   
+                    "    field(ZNAM, \"${4:zero_name}\")    field(ZSV, \"${5:NO_ALARM }${6:MINOR }${7:MAJOR }\")", 
+                    "    field(ONAM, \"${8:one_name}\")     field(OSV, \"${9:NO_ALARM }${10:MINOR }${11:MAJOR }\")",
+                    "    field(HIGH, \"${12:seconds_to_hold_high_state}\")",
+                    "    field(OUT,  \"${13:output link}\")",
+                    "}${14}"]
     },
     "aSub Record": {
         "prefix": "epics.record.asub",
