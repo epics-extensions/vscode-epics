@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.0.9 - 2020-02-06
+  - Added coloring for *.vdb files
+  - add NELM
+  - fix record.record
+  - improve and add wetest snippets to fit wetest version 1.2.0
+  - add inp and out field to bi/bo. Add alarm to bi/bo
+ 
 ## 0.0.8 - 2019-07-04
  - fix startup macros
  - add range and limit snippet for weTest
