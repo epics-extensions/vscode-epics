@@ -53,4 +53,9 @@ Snippets are mainly coming from [language-epics](https://github.com/mmllski/lang
 
 ## to do
  - [issues](https://github.com/NSenaud/vscode-epics/issues)
+ - weTest: 
+   - new scheme
+   - mbbi: add alarm?
+   - add CP or PP by default ?
+
 
