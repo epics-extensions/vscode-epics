@@ -1,120 +1,171 @@
 {
-    "name": "vscode-epics",
-    "displayName": "vscode-epics",
-    "description": "EPICS syntax highlighting and tools.",
-    "version": "0.0.9",
-    "extensionDependencies": ["source.c", "redhat.vscode-yaml"],
-    "publisher": "nsd",
-    "icon": "images/EPICS_EYEV2_little.png",
-    "engines": {
-        "vscode": "^1.5.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:NSenaud/vscode-epics.git"
-    },
-    "categories": ["Programming Languages", "Snippets"],
-    "contributes": {
-        "languages": [{
-            "id": "database",
-            "aliases": ["EPICS database", "DB", "VDB"],
-            "extensions": [".db", ".vdb", ".template"],
-            "configuration": "./language-configuration.json"
-        },
-        {
-            "id": "substitutions",
-            "aliases": ["EPICS substitutions", "substitutions"],
-            "extensions": [".substitutions", ".sub", ".subs"],
-            "configuration": "./language-configuration.json"
-        },
-        {
-            "id": "startup",
-            "aliases": ["EPICS startup", "startup"],
-            "extensions": [".cmd"],
-            "configuration": "./language-configuration.json"
-        },
-        {
-            "id": "proto",
-            "aliases": ["EPICS prototypes", "prototypes"],
-            "extensions": [".proto"],
-            "configuration": "./language-configuration.json"
-        },
-        {
-            "id": "c",
-            "extensions": [".st"],
-            "configuration": "./language-configuration.json"
-        },
-        {
-            "id": "database definition",
-            "aliases": ["EPICS database definition", "DBD"],
-            "extensions": [".dbd"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "database",
-            "scopeName": "source.epics.db",
-            "path": "./syntaxes/db.tmLanguage.json"
-        },
-        {
-            "language": "substitutions",
-            "scopeName": "source.epics.sub",
-            "path": "./syntaxes/sub.tmLanguage.json"
-        },
-        {
-            "language": "startup",
-            "scopeName": "source.epics.startup",
-            "path": "./syntaxes/startup.tmLanguage.json"
-        },
-        {
-            "language": "proto",
-            "scopeName": "source.epics.proto",
-            "path": "./syntaxes/proto.tmLanguage.json"
-        },
-        {
-            "injectTo": ["source.c"],
-            "scopeName": "source.epics.snl",
-            "path": "./syntaxes/snl.tmLanguage.json"
-        },
-        {
-            "language": "database definition",
-            "scopeName": "source.epics.dbd",
-            "path": "./syntaxes/dbd.tmLanguage.json"
-        },
-        {
-            "injectTo": ["source.c"],
-            "scopeName": "source.epics.c",
-            "path": "./syntaxes/cEPICS.tmLanguage.json"
-        }],
-        "snippets": [
-            {
-                "language": "database",
-                "path": "./snippets/db.json"
-            },
-            {
-                "language": "startup",
-                "path": "./snippets/startup.json"
-            },
-            {
-                "language": "c",
-                "path": "./snippets/c.json"
-            },
-            {
-                "language": "database definition",
-                "path": "./snippets/dbd.json"
-            },
-            {
-                "language": "yaml",
-                "path": "./snippets/weTest.json"
-            },
-            {
-                "language": "substitutions",
-                "path": "./snippets/substitutions.json"
-            },
-            {
-                "language": "c",
-                "path": "./snippets/snl.json"
-            }
-        ]
-    }
+	"name": "vscode-epics",
+	"displayName": "vscode-epics",
+	"description": "EPICS syntax highlighting and tools.",
+	"version": "0.0.9",
+	"extensionDependencies": [
+		"source.c",
+		"redhat.vscode-yaml"
+	],
+	"publisher": "nsd",
+	"icon": "images/EPICS_EYEV2_little.png",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:NSenaud/vscode-epics.git"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "database",
+				"aliases": [
+					"EPICS database",
+					"DB",
+					"VDB"
+				],
+				"extensions": [
+					".db",
+					".vdb",
+					".template"
+				],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "substitutions",
+				"aliases": [
+					"EPICS substitutions",
+					"substitutions"
+				],
+				"extensions": [
+					".substitutions",
+					".sub",
+					".subs"
+				],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "startup",
+				"aliases": [
+					"EPICS startup",
+					"startup"
+				],
+				"extensions": [
+					".cmd",
+					".iocsh"
+				],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "proto",
+				"aliases": [
+					"EPICS prototypes",
+					"prototypes"
+				],
+				"extensions": [
+					".proto"
+				],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "c",
+				"extensions": [
+					".st"
+				],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "database definition",
+				"aliases": [
+					"EPICS database definition",
+					"DBD"
+				],
+				"extensions": [
+					".dbd"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "database",
+				"scopeName": "source.epics.db",
+				"path": "./syntaxes/db.tmLanguage.json"
+			},
+			{
+				"language": "substitutions",
+				"scopeName": "source.epics.sub",
+				"path": "./syntaxes/sub.tmLanguage.json"
+			},
+			{
+				"language": "startup",
+				"scopeName": "source.epics.startup",
+				"path": "./syntaxes/startup.tmLanguage.json"
+			},
+			{
+				"language": "proto",
+				"scopeName": "source.epics.proto",
+				"path": "./syntaxes/proto.tmLanguage.json"
+			},
+			{
+				"injectTo": [
+					"source.c"
+				],
+				"scopeName": "source.epics.snl",
+				"path": "./syntaxes/snl.tmLanguage.json"
+			},
+			{
+				"language": "database definition",
+				"scopeName": "source.epics.dbd",
+				"path": "./syntaxes/dbd.tmLanguage.json"
+			},
+			{
+				"injectTo": [
+					"source.c"
+				],
+				"scopeName": "source.epics.c",
+				"path": "./syntaxes/cEPICS.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "database",
+				"path": "./snippets/db.json"
+			},
+			{
+				"language": "startup",
+				"path": "./snippets/startup.json"
+			},
+			{
+				"language": "c",
+				"path": "./snippets/c.json"
+			},
+			{
+				"language": "database definition",
+				"path": "./snippets/dbd.json"
+			},
+			{
+				"language": "yaml",
+				"path": "./snippets/weTest.json"
+			},
+			{
+				"language": "substitutions",
+				"path": "./snippets/substitutions.json"
+			},
+			{
+				"language": "c",
+				"path": "./snippets/snl.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "a3b453d6-fd25-4340-acda-62c6a214e56a",
+		"publisherId": "8be51969-b866-43a5-9f42-64f40017dfb5",
+		"publisherDisplayName": "nsd"
+	}
 }
-
