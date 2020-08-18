@@ -1,6 +1,11 @@
 # Change Log
 
-## 0.0.10 - 2020-0-07
+## 0.0.11 - 2020-08-17
+
+- add `NOBT`, `PORT`, `ADDR`, `OMAX`, `IMAX`, `TMOD`, `IFACE`, `INAM`, `BRSV` to the field type.
+- add lso, lsi, int64in, int64out, and printf to the record type
+
+## 0.0.10 - 2020-07-07
 
 - add `.iocsh` file to startup
 
