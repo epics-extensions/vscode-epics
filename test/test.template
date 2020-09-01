@@ -1,0 +1,4 @@
+substitute "A=value"
+substitute "A=value,B=value"
+substitute "A=value,B=value,C=\"quoted value\""
+include "test.db"

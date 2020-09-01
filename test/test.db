@@ -1,2 +1,57 @@
+#Comment
+record(ai, "record_with_macros_${MACRO}_$(MACRO)") {
+    field(DESC, "description with \"quotes\"")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP,  "@asyn($(OTHER_MACRO),0,1) Param")
+}
 
+record(fanout, "name") {
+    field(LNK0, "")
+    field(LNKF, "")
+}
 
+record(calc, "name") {
+    field(INPA, "")
+    field(INPL, "")
+}
+
+record(ai, "menuScan") {
+    field(SCAN, "Passive")
+    field(SCAN, "Event")
+    field(SCAN, "I/O Intr")
+    field(SCAN, "1 hour")
+    field(SCAN, "0.5 hours")
+    field(SCAN, ".3 hours")
+    field(SCAN, "15 minutes")
+    field(SCAN, "3 seconds")
+    field(SCAN, "1 second")
+    field(SCAN, "2 Hertz")
+    field(SCAN, "100 Hz")
+}
+
+record(calcout, "calcoutOOPT_calcoutDOPT") {
+    field(OOPT, "Every Time")
+    field(OOPT, "On Change")
+    field(OOPT, "When Zero")
+    field(OOPT, "When Non-zero")
+    field(OOPT, "Transition To Zero")
+    field(OOPT, "Transition To Non-zero")
+
+    field(DOPT, "Use CALC")
+    field(DOPT, "Use OCAL")
+}
+
+record(fanout, "fanoutSELM") {
+    field(SELM, "All")
+    field(SELM, "Specified")
+    field(SELM, "Mask")
+}
+
+record(ao, "menuOmsl_aoOif") {
+    field(OMSL, "supervisory")
+    field(OMSL, "closed_loop")
+
+    field(OIF, "Full")
+    field(OIF, "Incremental")
+}

@@ -30,6 +30,10 @@
 					"match": "\\b(record)\\b"
 				},
 				{
+					"name": "keyword.control.template.epics",
+					"match": "\\b(include|substitute)\\b"
+				},
+				{
 					"name": "constant.character.epics",
 					"match": "\\b(field)\\b"
 				}
@@ -39,19 +43,50 @@
 			"name": "string.quoted.double.epics",
 			"begin": "\"",
 			"end": "\"",
-			"patterns": [ 
-				{
-					"name": "constant.character.escape.epics",
-					"match": "\\\\.",
-					"include": "#macros"
-				}
+			"patterns": [
+				{ "include": "#aoOif" },
+				{ "include": "#menuOmsl" },
+				{ "include": "#menuScan" },
+				{ "include": "#calcoutOOPT" },
+				{ "include": "#calcoutDOPT" },
+				{ "include": "#fanoutSELM" },
+				{ "include": "#macros" },
+				{ "include": "#string_escaped_char" }
 			]
+		},
+		"aoOif": {
+			"name": "constant.language.oif.epics",
+			"match": "(Full|Incremental)"
+		},
+		"menuOmsl": {
+			"name": "constant.language.omsl.epics",
+			"match": "(supervisory|closed_loop)"
+		},
+		"menuScan": {
+			"name": "constant.language.scan.epics",
+			"match": "(Passive|Event|I/O Intr|([0-9]+(\\.[0-9]+)?|\\.[0-9]+) (hour(s)?|minute(s)?|second(s)?|Hertz|Hz))"
+		},
+		"calcoutOOPT": {
+			"name": "constant.language.oopt.epics",
+			"match": "(Every Time|On Change|When Zero|When Non-zero|Transition To Zero|Transition To Non-zero)"
+		},
+		"calcoutDOPT": {
+			"name": "constant.language.dopt.epics",
+			"match": "(Use CALC|Use OCAL)"
+		},
+		"fanoutSELM": {
+			"name": "constant.language.selm.epics",
+			"match": "(All|Specified|Mask)"
+		},
+		"string_escaped_char": {
+			"name": "constant.character.escape.epics",
+			"match": "\\\\."
 		},
 		"record_types": {
 			"patterns": [
 				{
 					"name": "entity.name.type.record",
-					"match": "\\b(SCAN|PINI|aai|aao|ai|ao|aSub|bi|bo|calc|calcout|compress|dfanout|event|fanout|histogram|longin|longout|mbbi|mbbiDirect|mbbo|mbboDirect|permissive|sel|seq|state|stringin|stringout|subArray|sub|waveform)\\b"
+					"match": "\\b(aai|aao|ai|ao|aSub|bi|bo|calc|calcout|compress|dfanout|event|fanout|histogram|longin|longout|int64in|int64out|mbbi|mbbiDirect|mbbo|mbboDirect|permissive|printf|sel|seq|state|stringin|stringout|lsi|lso|subArray|sub|waveform)\\b"
 				}
 			]
 		},
@@ -59,15 +94,31 @@
 			"patterns": [
 				{
 					"name": "entity.name.type.field",
-					"match": "\\b(SCAN|PINI|PHAS|EVNT|PRIO|DISV|DISA|SDIS|PROC|DISS|LSET|LCNT|PACT|FLNK|STAT|SEVR|NSTA|NSEV|ACKS|ACKT|UDF|SPVT|RSET|DSET|DPVT|TPRO|BKPT|NAME|DESC|ASG|TSE|TSEL|DTYP|MLOK|MLIS|DISP|PUTF|RPRO|ASP|PPN|PPNN|RDES|TIME|INP|DTYP|RVAL|VAL|SIMM|SIML|SVAL|SIOL|SIMS|OUT|OUTA|OUTB|OUTC|OUTD|OUTE|OUTF|OUTG|OUTH|OUTI|OUTJ|OUTK|OUTL|OUTM|OUTN|OUTO|OUTP|OUTQ|OUTR|OUTS|OUTT|OUTU|DTYP|VAL|OVAL|RVAL|RBV|DOL|OMSL|OIF|SIMM|SIML|SIOL|SIMS|IVOA|IVOV|PREC|EGU|DRVL|DRVH|ZNAM|ONAM|HIHI|HIGH|LOW|LOLO|HHSV|HSV|LSV|LLSV|HYST|CALC|INPA|INPB|INPC|INPD|INPE|INPF|INPG|INPH|INPI|INPJ|INPK|INPL|LNK1|LNK2|LNK3|LNK4|LNK5|LNK6|ZRVL|ONVL|TWVL|THVL|FRVL|FVVL|SXVL|SVVL|EIVL|NIVL|TEVL|ELVL|TVVL|TTVL|FTVL|FFVL|ZRST|ONST|TWST|THST|FRST|FVST|SXST|SVST|EIST|NIST|TEST|ELST|TVST|TTST|FTST|FFST|B0|B1|B2|B3|B4|B5|B6|B7|B8|B9|BA|BB|BC|BD|BE|BF|SNAM|FTA|FTB|FTC|FTD|FTE|FTF|FTG|FTH|FTI|FTJ|FTK|FTL|FTM|FTN|FTO|FTP|FTQ|FTR|FTS|FTT|FTU|NOA|NOB|NOC|NOD|NOE|NOF|NOG|NOH|NOI|NOJ|NOK|NOL|NOM|NON|NOO|NOP|NOQ|NOR|NOS|NOT|NOU|FTVA|FTVB|FTVC|FTVD|FTVE|FTVF|FTVG|FTVH|FTVI|FTVJ|FTVK|FTVL|FTVM|FTVN|FTVO|FTVP|FTVQ|FTVR|FTVS|FTVT|FTVU|NOVA|NOVB|NOVC|NOVD|NOVE|NOVF|NOVG|NOVH|NOVI|NOVJ|NOVK|NOVL|NOVM|NOVN|NOVO|NOVP|NOVQ|NOVR|NOVS|NOVT|NOVU|LINR|HOPR|LOPR|EGUL|EGUF|ZSV|OSV|COSV|UNSV|COSV|ZRSV|ONSV|TWSV|THSV|FRSV|FVSV|SXSV|SVSV|EISV|NISV|TESV|ELSV|TVSV|TTSV|FTSV|FFSV|NELM)\\b"
+					"match": "\\b(SCAN|PINI|PHAS|EVNT|PRIO|DISV|DISA|SDIS|PROC|DISS|LSET|LCNT|PACT|FLNK|STAT|SEVR|NSTA|NSEV|ACKS|ACKT|UDF|SPVT|RSET|DSET|DPVT|TPRO|BKPT|NAME|DESC|ASG|TSE|TSEL|DTYP|MLOK|MLIS|DISP|PUTF|RPRO|ASP|PPN|PPNN|RDES|TIME|INP|DTYP|RVAL|VAL|SIMM|SIML|SVAL|SIOL|SIMS|OUT|OUT[A-U]|DTYP|VAL|OVAL|RVAL|RBV|DOL|OMSL|OIF|SIMM|SIML|SIOL|SIMS|IVOA|IVOV|PREC|EGU|DRVL|DRVH|ZNAM|ONAM|HIHI|HIGH|LOW|LOLO|HHSV|HSV|LSV|LLSV|HYST|CALC|INP[A-L]|LNK[0-9A-F]|ZRVL|ONVL|TWVL|THVL|FRVL|FVVL|SXVL|SVVL|EIVL|NIVL|TEVL|ELVL|TVVL|TTVL|FTVL|FFVL|ZRST|ONST|TWST|THST|FRST|FVST|SXST|SVST|EIST|NIST|TEST|ELST|TVST|TTST|FTST|FFST|B[0-9A-F]|SNAM|FT[A-U]|NO[A-U]|FTV[A-U]|NOV[A-U]|LINR|HOPR|LOPR|EGUL|EGUF|ZSV|OSV|COSV|UNSV|COSV|ZRSV|ONSV|TWSV|THSV|FRSV|FVSV|SXSV|SVSV|EISV|NISV|TESV|ELSV|TVSV|TTSV|FTSV|FFSV|NELM|OCAL|OEVT|OOPT|MALM|DOPT|INDX|ALG|BALG|NSAM|SELM|SELN|SELL|SIZV|ODLY|FMT|INP[0-9])\\b"
 				}
 			]
 		},
 		"macros": {
 			"patterns": [
 				{
-					"name": "variable.parameter",
-					"match": "\\${[A-Z+a-z+0-9+_]+}"
+					"name": "variable.parameter.epics",
+					"begin": "\\$\\{",
+					"end": "\\}",
+					"patterns": [ { "include": "#macro_ref" } ]
+				},
+				{
+					"name": "variable.parameter.epics",
+					"begin": "\\$\\(",
+					"end": "\\)",
+					"patterns": [ { "include": "#macro_ref" } ]
+				}
+			]
+		},
+		"macro_ref": {
+			"patterns": [
+				{
+					"name": "variable.parameter.epics",
+					"match": "[A-Z+a-z+0-9+_]+"
 				}
 			]
 		},
