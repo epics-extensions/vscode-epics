@@ -57,5 +57,14 @@ Snippets are mainly coming from [language-epics](https://github.com/mmllski/lang
    - new scheme
    - mbbi: add alarm?
    - add CP or PP by default ?
+   - field to add: OROC, OOPT ...?
+   - dbLoadTemplate(char ⋆subfile, char ⋆substitutions): dbLoadTemplate("../../db/iocTest.substitutions", "ASYN_RFFI_PORT=${ASYN_RFFI_PORT}")
+   - dbLoadRecords() ...
+   - dtyp: asy32..
+   - ao: egul eguf prec drvl hopr...
+   - ai ao: add alarms
+   - mbbi alarms
+   - raw soft channel vs soft channel
+   - wetest: add field value to snippet test
 
 
