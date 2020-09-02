@@ -10,8 +10,6 @@
         "body": "\\${${1:MACRO}\\}${2}"
     },
 
-    // fields
-
     "generic field": {
         "prefix": "epics.field.field",
         "body": "field(${1:field_type}, \"${2:field_value}\")${3}"
@@ -132,7 +130,6 @@
                     "field(HYST, \"${28:double}\")${31}"]
     },
   
-    // specific records
     "analog input": {
         "prefix": "epics.record.ai",
         "body": [   "record(ai, \"${1:record_name}\") {",
@@ -366,4 +363,3 @@
                     "}${4}"]
     }
 }
-
