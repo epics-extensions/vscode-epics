@@ -22,6 +22,14 @@
 				{
 					"name": "keyword.control.epics",
 					"match": "\\b(path|addpath|include|menu|choice|recordtype|field|device|driver|registrar|function|variable|breaktable|record|grecord|info|alias)\\b"
+				},
+				{
+					"name": "keyword.control.field.epics",
+					"match": "\\b(prompt|prompt[gG]roup|asl|interest|size|extra|special|menu)\\b"
+				},
+				{
+					"name": "constant.language.dbf.epics",
+					"match": "\\b(DBF_STRING|DBF_INT|DBF_FLOAT|DBF_ENUM|DBF_CHAR|DBF_LONG|DBF_DOUBLE|DBF_MENU)\\b"
 				}
 			]
 		},
@@ -29,7 +37,7 @@
 			"name": "string.quoted.double.epics",
 			"begin": "\"",
 			"end": "\"",
-			"patterns": [ 
+			"patterns": [
 				{
 					"name": "constant.character.escape.epics",
 					"match": "\\\\.",

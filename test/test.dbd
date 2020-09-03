@@ -17,3 +17,23 @@ function(integrateWF)
 # Variables
 variable(<variable name>)
 
+# Menu
+menu(xxxRecordXXX) {
+    choice(xxxRecordXXX_Choice_1,"Choice 1")
+    choice(xxxRecordXXX_Choice_2,"Choice 2")
+    choice(xxxRecordXXX_Choice_3,"Choice 3")
+}
+
+# Record type with a field
+recordtype(xxxRecordType) {
+    field(XXX,DBF_FLOAT) {
+        prompt("Pointer to custom structure")
+        promptgroup(GUI_BITS1)
+        special(SPC_NOMOD)
+        asl(ASL0)
+        interest(1)
+        size(4)
+        extra("void *         cbst")
+        menu(xxxRecordXXX)
+    }
+}
