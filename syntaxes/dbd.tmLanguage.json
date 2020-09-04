@@ -25,7 +25,7 @@
 				},
 				{
 					"name": "keyword.control.field.epics",
-					"match": "\\b(prompt|prompt[gG]roup|asl|interest|size|extra|special|menu)\\b"
+					"match": "\\b(prompt|prompt[gG]roup|asl|interest|size|extra|special|menu|pp)\\b"
 				},
 				{
 					"name": "constant.language.dbf.epics",

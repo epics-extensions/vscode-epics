@@ -35,5 +35,6 @@ recordtype(xxxRecordType) {
         size(4)
         extra("void *         cbst")
         menu(xxxRecordXXX)
+        pp(TRUE)
     }
 }
