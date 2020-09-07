@@ -26,7 +26,7 @@ This VS Code extension provides syntax highlighting for EPICS database, template
 | --- |
 
 - [ ] Compilation facilities
-  
+
 - [ ] Linter for:
   - [ ] database and template files
   - [ ] substitutions files
@@ -51,17 +51,17 @@ Every field types are not recognized yet, only the more commons.
 Snippets are mainly coming from [language-epics](https://github.com/mmllski/language-epics) Atom plugin, [agaget](https://github.com/agaget) and [vnadot](https://github.com/vnadot).
 
 ## to do
- - [issues](https://github.com/NSenaud/vscode-epics/issues)
- - weTest: 
-   - new scheme
-   - add field value to snippet test
- - mbbi: add alarm?
- - add CP or PP by default ?
- - field to add: OROC, OOPT ...?
- - dbLoadTemplate(char ⋆subfile, char ⋆substitutions): dbLoadTemplate("../../db/iocTest.substitutions", "ASYN_RFFI_PORT=${ASYN_RFFI_PORT}")
- - dbLoadRecords() ...
- - dtyp: asy32..
- - ao: egul eguf prec drvl hopr...
- - ai ao: add alarms
- - mbbi alarms
- - raw soft channel vs soft channel
+- [issues](https://github.com/NSenaud/vscode-epics/issues)
+- weTest:
+  - new scheme
+  - add field value to snippet test
+- mbbi: add alarm?
+- add CP or PP by default ?
+- field to add: OROC, OOPT ...?
+- dbLoadTemplate(char ⋆subfile, char ⋆substitutions): dbLoadTemplate("../../db/iocTest.substitutions", "ASYN_RFFI_PORT=${ASYN_RFFI_PORT}")
+- dbLoadRecords() ...
+- dtyp: asy32..
+- ao: egul eguf prec drvl hopr...
+- ai ao: add alarms
+- mbbi alarms
+- raw soft channel vs soft channel
