@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.0.11 - TBA
+
+- add MSI tool keywords: include, substitute
+- add field value enums: aoOif, menuOmsl, menuScan, calcoutOOPT, calcoutDOPT, fanoutSELM
+- add support for $(MACRO)
+- add record types: int64in, int64out, printf, lsi, lso
+- add fields: OCAL, OEVT, OOPT, MALM, DOPT, INDX, ALG, BALG, NSAM, SELM, SELN, SELL, SIZV, ODLY, FMT, INP0-INP9
+- improved highlighting of escaped quotation marks
+
 ## 0.0.10 - 2020-0-07
 
 - add `.iocsh` file to startup
