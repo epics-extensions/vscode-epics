@@ -21,15 +21,37 @@
 			"patterns": [
 				{
 					"name": "keyword.control.epics",
-					"match": "\\b(path|addpath|include|menu|choice|recordtype|field|device|driver|registrar|function|variable|breaktable|record|grecord|info|alias)\\b"
+					"match": "\\b(path|addpath|include|menu|choice|recordtype|field|device|driver|registrar|function|variable|breaktable|record|grecord|info|alias|link)\\b"
 				},
 				{
 					"name": "keyword.control.field.epics",
-					"match": "\\b(prompt|prompt[gG]roup|asl|interest|size|extra|special|menu|pp)\\b"
+					"match": "\\b(asl|initial|promptgroup|prompt|special|pp|interest|base|size|extra|menu|prop)\\b",
+					"comment": "Source: dbRecordtypeFieldItem(), ioc/dbStatic/dbLexRoutines.c"
 				},
 				{
 					"name": "constant.language.dbf.epics",
-					"match": "\\b(DBF_STRING|DBF_INT|DBF_FLOAT|DBF_ENUM|DBF_CHAR|DBF_LONG|DBF_DOUBLE|DBF_MENU)\\b"
+					"match": "\\b(DBF_STRING|DBF_U?CHAR|DBF_U?SHORT|DBF_U?LONG|DBF_U?INT64|DBF_FLOAT|DBF_DOUBLE|DBF_ENUM|DBF_MENU|DBF_DEVICE|DBF_(IN|OUT|FWD)LINK|DBF_NOACCESS)\\b",
+					"comment": "Source: include/dbFldTypes.h"
+				},
+				{
+					"name": "constant.language.pp.epics",
+					"match": "\\b(YES|NO|TRUE|FALSE)\\b",
+					"comment": "Source: dbRecordtypeFieldItem(), ioc/dbStatic/dbLexRoutines.c"
+				},
+				{
+					"name": "constant.language.asl.epics",
+					"match": "\\b(ASL0|ASL1)\\b",
+					"comment": "Source: dbRecordtypeFieldItem(), ioc/dbStatic/dbLexRoutines.c"
+				},
+				{
+					"name": "constant.language.base.epics",
+					"match": "\\b(DECIMAL|HEX)\\b",
+					"comment": "Source: dbRecordtypeFieldItem(), ioc/dbStatic/dbLexRoutines.c"
+				},
+				{
+					"name": "constant.language.special.epics",
+					"match": "\\b(SPC_NOMOD|SPC_DBADDR|SPC_SCAN|SPC_ALARMACK|SPC_AS|SPC_MOD|SPC_RESET|SPC_LINCONV|SPC_CALC)\\b",
+					"comment": "Source: include/special.h"
 				}
 			]
 		},
@@ -38,12 +60,13 @@
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
-				{
-					"name": "constant.character.escape.epics",
-					"match": "\\\\.",
-					"include": "#macros"
-				}
+				{ "include": "#macros" },
+				{ "include": "#escaped_char" }
 			]
+		},
+		"escaped_char": {
+			"name": "constant.character.escape.epics",
+			"match": "\\\\."
 		},
 		"macros": {
 			"patterns": [
@@ -58,10 +81,7 @@
 			"begin": "#",
 			"end": "^",
 			"patterns": [
-				{
-					"name":"constant.character.escape.epics",
-					"match": "\\\\."
-				}
+				{ "include": "#escaped_char" }
 			]
 		}
 	}

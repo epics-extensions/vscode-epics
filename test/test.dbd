@@ -24,17 +24,20 @@ menu(xxxRecordXXX) {
     choice(xxxRecordXXX_Choice_3,"Choice 3")
 }
 
-# Record type with a field
+# Record type with a \"field\"
 recordtype(xxxRecordType) {
-    field(XXX,DBF_FLOAT) {
-        prompt("Pointer to custom structure")
-        promptgroup(GUI_BITS1)
-        special(SPC_NOMOD)
+    field(XXX,DBF_DOUBLE) {
         asl(ASL0)
+        initial("123.456")
+        promptgroup(GUI_BITS1)
+        prompt("Pointer to \"custom\" structure")
+        special(SPC_NOMOD)
+        pp(TRUE)
         interest(1)
+        base(DECIMAL)
         size(4)
         extra("void *         cbst")
         menu(xxxRecordXXX)
-        pp(TRUE)
+        prop(YES)
     }
 }
