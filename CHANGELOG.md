@@ -11,6 +11,7 @@
 - add DBD keyswords: asl, initial, promptgroup, prompt, special, pp, interest, base, size, extra, menu, drop
 - add DBD enums for keywords: pp, asl, base, and special
 - add DBD types (e.g. DBF_DOUBLE)
+- improved highlighting of escaped quotation marks in DBD
 
 ## 0.0.10 - 2020-0-07
 
