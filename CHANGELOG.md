@@ -8,6 +8,9 @@
 - add record types: int64in, int64out, printf, lsi, lso
 - add fields: OCAL, OEVT, OOPT, MALM, DOPT, INDX, ALG, BALG, NSAM, SELM, SELN, SELL, SIZV, ODLY, FMT, INP0-INP9
 - improved highlighting of escaped quotation marks
+- add DBD keyswords: asl, initial, promptgroup, prompt, special, pp, interest, base, size, extra, menu, drop
+- add DBD enums for keywords: pp, asl, base, and special
+- add DBD types (e.g. DBF_DOUBLE)
 
 ## 0.0.10 - 2020-0-07
 
