@@ -17,3 +17,27 @@ function(integrateWF)
 # Variables
 variable(<variable name>)
 
+# Menu
+menu(xxxRecordXXX) {
+    choice(xxxRecordXXX_Choice_1,"Choice 1")
+    choice(xxxRecordXXX_Choice_2,"Choice 2")
+    choice(xxxRecordXXX_Choice_3,"Choice 3")
+}
+
+# Record type with a \"field\"
+recordtype(xxxRecordType) {
+    field(XXX,DBF_DOUBLE) {
+        asl(ASL0)
+        initial("123.456")
+        promptgroup(GUI_BITS1)
+        prompt("Pointer to \"custom\" structure")
+        special(SPC_NOMOD)
+        pp(TRUE)
+        interest(1)
+        base(DECIMAL)
+        size(4)
+        extra("void *         cbst")
+        menu(xxxRecordXXX)
+        prop(YES)
+    }
+}
