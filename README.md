@@ -65,3 +65,5 @@ Snippets are mainly coming from [language-epics](https://github.com/mmllski/lang
 - ai ao: add alarms
 - mbbi alarms
 - raw soft channel vs soft channel
+- add epicsRegisterFunction(myFunction);
+- add conversion field: LINR, RVAL, ROFF, EGUF, EGUL, AOFF, ASLO, ESLO, EOFF
