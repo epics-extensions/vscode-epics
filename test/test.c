@@ -313,3 +313,47 @@ static int signalProcessXAxis(aSubRecord *precord) {
 
 epicsRegisterFunction(signalProcessXAxis);
 
+static long testDevice_dev_report(int interest);
+static long testDevice_init(int after);
+static long testDevice_init_record(void* precord);
+static long testDevice_rw_record(void* precord);
+static long testDevice_get_ioint_info(int cmd, struct dbCommon* precord, IOSCANPVT* ppvt);
+struct {
+    long number;
+    DEVSUPFUN dev_report;
+    DEVSUPFUN init;
+    DEVSUPFUN init_record;
+    DEVSUPFUN get_ioint_info;
+    DEVSUPFUN read_write_record;
+} testDevice = {
+    5,
+    (DEVSUPFUN)testDevice_dev_report,
+    (DEVSUPFUN)testDevice_init,
+    (DEVSUPFUN)testDevice_init_record,
+    (DEVSUPFUN)testDevice_get_ioint_info,
+    (DEVSUPFUN)testDevice_rw_record,
+};
+
+epicsExportAddress(dset, testDevice);
+static long testDevice_dev_report(int interest) {
+    return 0;
+}
+
+static long testDevice_init(int after) {
+    return 0;
+}
+
+static long testDevice_init_record(void* precord) {
+    aiRecord* rec = (aiRecord*)precord;
+    return 0;
+}
+
+static long testDevice_rw_record(void* precord) {
+    aiRecord* rec = (aiRecord*)precord;
+    rec->pact = FALSE;
+    return 0;
+}
+
+static long testDevice_get_ioint_info(int cmd, struct dbCommon* precord, IOSCANPVT* ppvt) {
+    return 0;
+}
