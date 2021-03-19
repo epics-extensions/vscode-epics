@@ -5,7 +5,7 @@
                     "    pattern { PREFIX,     SCAN }",
                     "            { ${ PREFIX } \"1 second\"}",
                     "            { ${ PREFIX } \"3 second\"}",
-                    "}"
+                    "}${0}"
                 ]
     },
     "include": {
@@ -13,7 +13,7 @@
         "body": [   "file db/myDBfile.template {",
                     "    { P=xxx, Y=yyy}",
                     "    { P=aaa, Y=bbb}",
-                    "}"
+                    "}${0}"
                 ]
     },
     "header": {
@@ -23,6 +23,6 @@
                     "# author: ${4:victor.nadot@cea.fr}",
                     "# company: ${5:CEA / DRF / IRFU / LDISC}",
                     "# macros:",
-                    "# ${6:P : ${P=CEA:}}"]
+                    "# ${6:P : ${P=CEA:}}${0}"]
     }
 }

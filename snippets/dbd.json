@@ -2,37 +2,37 @@
     "include": {
         "prefix": "epics.include",
         "body": [   "# Record types",
-                    "include \"${1:xxxRecord.dbd}\""
+                    "include \"${1:xxxRecord.dbd}\"${0}"
                 ]
     },
     "device": {
         "prefix": "epics.device",
         "body": [   "# Devices",
-                    "device(${1:<record_type>}, ${2:<link_type>}, ${3:<dset_name>}, \"${4:<choice_string>}\")"
+                    "device(${1:<record_type>}, ${2:<link_type>}, ${3:<dset_name>}, \"${4:<choice_string>}\")${0}"
                 ]
     },
     "driver": {
         "prefix": "epics.driver",
         "body": [   "# Drivers",
-                    "driver(${3:<drvet_name>})"
+                    "driver(${3:<drvet_name>})${0}"
                 ]
     },
     "registrar": {
         "prefix": "epics.registrar",
         "body": [   "# SNL programs or functions to be invoked from iocsh",
-                    "registrar(${1:<function_name>})"
+                    "registrar(${1:<function_name>})${0}"
                 ]
     },
     "function": {
         "prefix": "epics.function",
         "body": [   "# Functions for sub or gensub records",
-                    "function(${1:<integrateWF>})"
+                    "function(${1:<integrateWF>})${0}"
                 ]
     },
     "variable": {
         "prefix": "epics.variable",
         "body": [   "# Variables",
-                    "variable(${1:<variable_name>})"
+                    "variable(${1:<variable_name>})${0}"
                 ]
     }
 }

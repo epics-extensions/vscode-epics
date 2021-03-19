@@ -10,18 +10,18 @@
                     "        when (${5:condition1}) {",
                     "        } state ${4:state1}",
                     "    }",
-                    "}"]
+                    "${0}}"]
     },
     "SNL pvPut": {
         "prefix": "epics.snl.pvPut",
-        "body": [   "pvPut(${1:pv_variable});"]
+        "body": [   "pvPut(${1:pv_variable});${0}"]
     },
     "SNL pvAssign": {
         "prefix": "epics.snl.pvAssign",
-        "body": [   "pvAssign(${1:pv_variable}, \"${2:pv_name}\")"]
+        "body": [   "pvAssign(${1:pv_variable}, \"${2:pv_name}\")${0}"]
     },
     "SNL pvGet": {
         "prefix": "epics.snl.pvGet",
-        "body": [   "pvGet(${1:pv_variable});"]
+        "body": [   "pvGet(${1:pv_variable});${0}"]
     }
 }

@@ -1,17 +1,17 @@
 {
     "scenario version": {
         "prefix": "epics.weTest.scenario.version",
-        "body": [   "version: {major: ${1:1}, minor: ${2:2}, bugfix: ${3:0}}"]
+        "body": [   "version: {major: ${1:1}, minor: ${2:2}, bugfix: ${3:0}}${0}"]
     },
     "scenario name": {
         "prefix": "epics.weTest.scenario.name",
-        "body": [   "name: ${1:MY_SCENARIO_NAME}"]
+        "body": [   "name: ${1:MY_SCENARIO_NAME}${0}"]
     },
     "scenario macros": {
         "prefix": "epics.weTest.scenario.macros",
         "body": [   "macros:",
                     "  - MACRO1: MY_MACRO1",
-                    "    MACRO2: MY_MACRO2"]
+                    "    MACRO2: MY_MACRO2${0}"]
     },
     "scenario include": {
         "prefix": "epics.weTest.scenario.include",
@@ -23,7 +23,7 @@
                     "   # with macro on several lines",
                     "   - path: myScript.yaml",
                     "     MACRO1: 'MY_MACRO1'",
-                    "     MACRO2: 'MY_MACRO2'"]
+                    "     MACRO2: 'MY_MACRO2'${0}"]
     },
     "scenario config": {
         "prefix": "epics.weTest.scenario.config",
@@ -36,7 +36,7 @@
                     "  ignore:      ${8:False} ${9:True} ",
                     "  skip:        ${10:False} ${11:True} ",
                     "  on_failure:  ${12:continue} ${13:pause} ${14:abort} ",
-                    "  retry:       ${15:5}"]
+                    "  retry:       ${15:5}${0}"]
     },
     "scenario tests": {
         "prefix": "epics.weTest.scenario.tests",
@@ -101,7 +101,7 @@
                     "    ignore:        False True",
                     "    skip:          False True",
                     "    on_failure:    continue pause abort",
-                    "    retry:         0"]
+                    "    retry:         0${0}"]
     },
     "unit range": {
         "prefix": "epics.weTest.unit.range",
@@ -114,7 +114,7 @@
                     "      stop:    ${6:10}",
                     "      step:    ${7:1}",
                     "    finally:",
-                    "      value:   ${8:0} # %"]
+                    "      value:   ${8:0} # %${0}"]
     },
     "unit limits": {
         "prefix": "epics.weTest.unit.limits",
@@ -130,7 +130,7 @@
                     "        set_value: ${9:11}",
                     "        get_value: ${10:10}",
                     "    finally:",
-                    "      value:       ${11:0} # %"]
+                    "      value:       ${11:0} # %${0}"]
     },
     "functional command": {
         "prefix": "epics.weTest.functional.command",
@@ -148,6 +148,6 @@
                     "    ignore:        False True",
                     "    skip:          False True",
                     "    on_failure:    continue pause abort",
-                    "    retry:         5"]
+                    "    retry:         5${0}"]
     }
 }
