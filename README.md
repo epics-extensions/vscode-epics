@@ -79,7 +79,6 @@ add Stephane (https://gitlab.com/stephane.tzvetkov)
 - weTest:
   - new scheme
   - add field value to snippet test
-- mbbi: add alarm?
 - add CP or PP by default ?
 - field to add: OROC, OOPT ...?
 - dtyp: asy32..
