@@ -5,17 +5,13 @@
 # macros:
 # P : ${P=CEA:}
 
-epicsInt8
-epicsUInt8
-epicsInt16
-epicsUInt16
-epicsEnum16
-epicsInt32
-epicsUInt32
-epicsInt64
-epicsUInt64
-epicsFloat32
-epicsFloat64
-epicsString
+file db/myDBfile.template {
+    { P=xxx, Y=yyy}
+    { P=aaa, Y=bbb}
+}
 
-int 
+file db/myDBfile.template {
+    pattern { PREFIX,     SCAN }
+            { ${ PREFIX } "1 second"}
+            { ${ PREFIX } "3 second"}
+}

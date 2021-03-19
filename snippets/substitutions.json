@@ -1,10 +1,18 @@
 {
-    "include": {
-        "prefix": "epics.substitutions.file",
+    "include-pattern": {
+        "prefix": "epics.substitutions.file.pattern",
         "body": [   "file db/myDBfile.template {",
                     "    pattern { PREFIX,     SCAN }",
                     "            { ${ PREFIX } \"1 second\"}",
                     "            { ${ PREFIX } \"3 second\"}",
+                    "}"
+                ]
+    },
+    "include": {
+        "prefix": "epics.substitutions.file",
+        "body": [   "file db/myDBfile.template {",
+                    "    { P=xxx, Y=yyy}",
+                    "    { P=aaa, Y=bbb}",
                     "}"
                 ]
     },

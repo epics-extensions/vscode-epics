@@ -95,9 +95,3 @@ add Stephane (https://gitlab.com/stephane.tzvetkov)
   - epics.subtituions.file: remove "/db"
   - add epics.subtituions.file2
 - bi/bo alarm : remove white space after "MAJOR "
-```
-file "xx.template"
-{
-    { P=xxx, Y=yyy}
-}
-```
