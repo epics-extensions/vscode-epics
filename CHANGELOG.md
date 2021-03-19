@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.0.0 - 2020-03-19
+- Add defaut value to macro for epicsEnvSet(). Improve dbLoadTemplate and dbLoadRecords.
+- add ${0} at the end of each snippets.
+- improve ao: add PREC EGU DRVL DRVH fields
+- add header for .db et .subs files
+- get all the fields of the EPICS database (thanks to Stephane)
+- add sscan record fields (ANL record)
+
 ## 0.0.11 - TBA
 
 - add MSI tool keywords: include, substitute
