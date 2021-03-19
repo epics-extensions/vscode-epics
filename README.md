@@ -91,6 +91,3 @@ add Stephane (https://gitlab.com/stephane.tzvetkov)
 - raw soft channel vs soft channel
 - add epicsRegisterFunction(myFunction);
 - add conversion field: LINR, RVAL, ROFF, EGUF, EGUL, AOFF, ASLO, ESLO, EOFF
-- sub file, second version:
-  - epics.subtituions.file: remove "/db"
-  - add epics.subtituions.file2
