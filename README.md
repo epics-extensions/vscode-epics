@@ -34,6 +34,18 @@ This VS Code extension provides syntax highlighting for EPICS database, template
   - [ ] streamdevice prototype files
   - [ ] SNL files
 
+## get all the fields of the EPICS database
+
+- "*.db*": to select .dbd and .dbd.pod files
+- commun: 
+```
+$ cat <path_to_epics-base>/src/ioc/db/*.db*  | grep 'field(' | tr "(," " " | awk '{print $2}' | tr "\n" "|" | sed 's/.$//'
+```
+- specific:
+```
+$ cat <path_to_epics-base>/src/std/rec/*.db* | grep 'field(' | tr "(," " " | awk '{print $2}' | tr "\n" "|" | sed 's/.$//'
+```
+
 ## Requirements
 
 VS Code 1.5 or newer version.
@@ -48,7 +60,19 @@ Every field types are not recognized yet, only the more commons.
 
 ## Credits
 
-Snippets are mainly coming from [language-epics](https://github.com/mmllski/language-epics) Atom plugin, [agaget](https://github.com/agaget) and [vnadot](https://github.com/vnadot).
+- Snippets are mainly coming from [language-epics](https://github.com/mmllski/language-epics) Atom plugin, [agaget](https://github.com/agaget) and [vnadot](https://github.com/vnadot).
+- get all the fields of the EPICS database trick is coming from [atzvetkov](https://gitlab.com/stephane.tzvetkov)
+
+
+- should add contributor names here (todo)
+
+add Stephane (https://gitlab.com/stephane.tzvetkov)
+"*.db*": to select .dbd and .dbd.pod files
+- get all the fields of the EPICS database:
+  - commun:   ```cat <path_to_epics-base>/src/ioc/db/*.db*  | grep 'field(' | tr "(," " " | awk '{print $2}' | tr "\n" "|" | sed 's/.$//'```
+  - specific: ```cat <path_to_epics-base>/src/std/rec/*.db* | grep 'field(' | tr "(," " " | awk '{print $2}' | tr "\n" "|" | sed 's/.$//'```
+  - sscan:    ```cat <path_to_scanApp>/*.db*                | grep 'field(' | tr "(," " " | awk '{print $2}' | tr "\n" "|" | sed 's/.$//'```
+
 
 ## to do
 - [issues](https://github.com/NSenaud/vscode-epics/issues)
@@ -67,3 +91,14 @@ Snippets are mainly coming from [language-epics](https://github.com/mmllski/lang
 - raw soft channel vs soft channel
 - add epicsRegisterFunction(myFunction);
 - add conversion field: LINR, RVAL, ROFF, EGUF, EGUL, AOFF, ASLO, ESLO, EOFF
+- sub file, second version:
+  - epics.subtituions.file: remove "/db"
+  - add epics.subtituions.file2
+- bi/bo alarm : remove white space after "MAJOR "
+```
+file "xx.template"
+{
+    { P=xxx, Y=yyy}
+}
+```
+- add header
