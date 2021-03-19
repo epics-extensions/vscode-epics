@@ -1,4 +1,9 @@
-
+# file: file_name.substitutions
+# description: this file is doing that ...
+# author: victor.nadot@cea.fr
+# company: CEA / DRF / IRFU / LDISC
+# macros:
+# P : ${P=CEA:}
 
 epicsInt8
 epicsUInt8

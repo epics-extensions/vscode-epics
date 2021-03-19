@@ -1,3 +1,10 @@
+# file: file_name.template
+# description: this file is doing that ...
+# author: victor.nadot@cea.fr
+# company: CEA / DRF / IRFU / LDISC
+# macros:
+# P : ${P=CEA:}
+
 #Comment
 record(ai, "record_with_macros_${MACRO}_$(MACRO)") {
     field(DESC, "description with \"quotes\"")
