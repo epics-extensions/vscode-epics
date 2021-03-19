@@ -94,4 +94,3 @@ add Stephane (https://gitlab.com/stephane.tzvetkov)
 - sub file, second version:
   - epics.subtituions.file: remove "/db"
   - add epics.subtituions.file2
-- bi/bo alarm : remove white space after "MAJOR "

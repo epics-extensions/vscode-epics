@@ -96,19 +96,19 @@
     }, 
     "lolo alarm severity field": {
         "prefix": "epics.field.llsv",
-        "body": "field(LLSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR }\")${4}"
+        "body": "field(LLSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR}\")${4}"
     }, 
     "zsv alarm severity field": {
         "prefix": "epics.field.zsv",
-        "body": "field(ZSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR }\")${4}"
+        "body": "field(ZSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR}\")${4}"
     }, 
     "osv alarm severity field": {
         "prefix": "epics.field.osv",
-        "body": "field(OSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR }\")${4}"
+        "body": "field(OSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR}\")${4}"
     }, 
     "cosv alarm severity field": {
         "prefix": "epics.field.cosv",
-        "body": "field(COSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR }\")${4}"
+        "body": "field(COSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR}\")${4}"
     }, 
     "alarm deadband field": {
         "prefix": "epics.field.hyst",
@@ -151,8 +151,8 @@
         "body": [   "record(bi, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
                     "    field(VAL,  \"${3:value}\")",
-                    "    field(ZNAM, \"${4:zero_name}\")    field(ZSV, \"${5:NO_ALARM }${6:MINOR }${7:MAJOR }\")",
-                    "    field(ONAM, \"${8:one_name}\")     field(OSV, \"${9:NO_ALARM }${10:MINOR }${11:MAJOR }\")",
+                    "    field(ZNAM, \"${4:zero_name}\")    field(ZSV, \"${5:NO_ALARM }${6:MINOR }${7:MAJOR}\")",
+                    "    field(ONAM, \"${8:one_name}\")     field(OSV, \"${9:NO_ALARM }${10:MINOR }${11:MAJOR}\")",
                     "    field(INP,  \"${12:input link}\")",
                     "}${13}"]
     },
@@ -161,8 +161,8 @@
         "body": [   "record(bo, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
                     "    field(VAL,  \"${3:value}\")",   
-                    "    field(ZNAM, \"${4:zero_name}\")    field(ZSV, \"${5:NO_ALARM }${6:MINOR }${7:MAJOR }\")", 
-                    "    field(ONAM, \"${8:one_name}\")     field(OSV, \"${9:NO_ALARM }${10:MINOR }${11:MAJOR }\")",
+                    "    field(ZNAM, \"${4:zero_name}\")    field(ZSV, \"${5:NO_ALARM }${6:MINOR }${7:MAJOR}\")", 
+                    "    field(ONAM, \"${8:one_name}\")     field(OSV, \"${9:NO_ALARM }${10:MINOR }${11:MAJOR}\")",
                     "    field(HIGH, \"${12:seconds_to_hold_high_state}\")",
                     "    field(OUT,  \"${13:output link}\")",
                     "}${14}"]
