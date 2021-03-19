@@ -1,7 +1,7 @@
 {
     "epicsEnvSet": {
         "prefix": "epics.epicsEnvSet",
-        "body": "epicsEnvSet(${1:MACRO}, \"${2:MACRO_VALUE}\")${0}"
+        "body": "epicsEnvSet(${1:MACRO}, \"$(${1:MACRO}=${2:MACRO_VALUE})\")${0}"
     },
     "require": {
         "prefix": "epics.require",
@@ -9,10 +9,10 @@
     },
     "dbLoadTemplate": {
         "prefix": "epics.dbLoadTemplate",
-        "body": "dbLoadTemplate(${1:file})${0}"
+        "body": "dbLoadTemplate(\"${1:file.substitutions}\", \"${3:P=$(P=CEA:)}, ${4:R=$(P=LAB:)}\")${0}"
     },
     "dbLoadRecords": {
         "prefix": "epics.dbLoadRecords",
-        "body": "dbLoadRecords(${1:file})${0}"
+        "body": "dbLoadRecords(\"${1:file}.${2|template,db|}\", \"${3:P=$(P=CEA:)}, ${4:R=$(P=LAB:)}\")${0}"
     }
 }

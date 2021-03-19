@@ -82,11 +82,10 @@ add Stephane (https://gitlab.com/stephane.tzvetkov)
 - mbbi: add alarm?
 - add CP or PP by default ?
 - field to add: OROC, OOPT ...?
-- dbLoadTemplate(char ⋆subfile, char ⋆substitutions): dbLoadTemplate("../../db/iocTest.substitutions", "ASYN_RFFI_PORT=${ASYN_RFFI_PORT}")
-- dbLoadRecords() ...
 - dtyp: asy32..
 - ai: lopr hopr...
 - ai ao: add alarms
 - mbbi alarms
 - raw soft channel vs soft channel
 - add conversion field: LINR, RVAL, ROFF, EGUF, EGUL, AOFF, ASLO, ESLO, EOFF
+- use "${3|one,two,three|}" for choice and not eg. ${1:NO_ALARM }${2:MINOR }${3:MAJOR}
