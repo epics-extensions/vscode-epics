@@ -143,7 +143,11 @@
         "prefix": "epics.record.ao",
         "body": [   "record(ao, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
-                    "    field(VAL,  \"${3:value}\")",    
+                    "    field(PREC, \"${3:3}\")",
+                    "    field(EGU,  \"${4:Volts}\")",
+                    "    field(DRVL, \"${5:-10}\")",
+                    "    field(DRVH, \"${6:+10}\")",
+                    "    field(VAL,  \"${7:0.000}\")",    
                     "}${0}"]
     },
     "binary input": {

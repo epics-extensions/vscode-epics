@@ -55,10 +55,11 @@ record(fanout, "fanoutSELM") {
     field(SELM, "Mask")
 }
 
-record(ao, "menuOmsl_aoOif") {
-    field(OMSL, "supervisory")
-    field(OMSL, "closed_loop")
-
-    field(OIF, "Full")
-    field(OIF, "Incremental")
+record(ao, "record_name") {
+    field(DESC, "description")
+    field(PREC, "3")
+    field(EGU,  "Volts")
+    field(DRVL, "-10")
+    field(DRVL, "+10")
+    field(VAL,  "0")
 }
