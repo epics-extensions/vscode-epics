@@ -89,5 +89,4 @@ add Stephane (https://gitlab.com/stephane.tzvetkov)
 - ai ao: add alarms
 - mbbi alarms
 - raw soft channel vs soft channel
-- add epicsRegisterFunction(myFunction);
 - add conversion field: LINR, RVAL, ROFF, EGUF, EGUL, AOFF, ASLO, ESLO, EOFF
