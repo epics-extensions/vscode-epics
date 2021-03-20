@@ -3,7 +3,11 @@
 # author: victor.nadot@cea.fr
 # company: CEA / DRF / IRFU / LDISC
 # macros:
-# - P: ${P=CEA:}
+# - >> Mandatory
+# - P: ${P=CEA:} | PV prefix
+# - >> Optional
+# - 
+
 
 
 file db/myDBfile.template {

@@ -373,6 +373,10 @@
                     "# author: ${2:victor.nadot@cea.fr}",
                     "# company: ${3:CEA / DRF / IRFU / LDISC}",
                     "# macros:",
-                    "# - ${4:P}: ${${4:P}=${5:CEA:}}${0}"]
+                    "# - >> Mandatory",
+                    "# - ${4:P}: ${${4:P}=${5:CEA:}} | ${6:PV prefix}",
+                    "# - >> Optional",
+                    "# - ",
+                    "${0}"]
     }
 }
