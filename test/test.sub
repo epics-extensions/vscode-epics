@@ -1,9 +1,10 @@
-# file: file_name.substitutions
+# file: test.sub
 # description: this file is doing that ...
 # author: victor.nadot@cea.fr
 # company: CEA / DRF / IRFU / LDISC
 # macros:
-# P : ${P=CEA:}
+# - P: ${P=CEA:}
+
 
 file db/myDBfile.template {
     { P=xxx, Y=yyy}

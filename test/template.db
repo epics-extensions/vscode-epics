@@ -1,5 +1,9 @@
-
-
+# file: template.db
+# description: this file is doing that ...
+# author: victor.nadot@cea.fr
+# company: CEA / DRF / IRFU / LDISC
+# macros:
+# - P: ${P=CEA:}
 
 field(HIHI, "float")
 field(HIGH, "float")
