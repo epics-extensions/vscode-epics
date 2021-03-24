@@ -11,6 +11,53 @@ epicsFloat32
 epicsFloat64
 epicsString
 
+#include <aSubRecord.h>
+#include <registryFunction.h>
+#include <epicsExport.h>
+
+// most of these examples are coming from Yves Lussignol (https://drf-gitlab.cea.fr/, signalProcessingApp module)
+// the goal is to provide examples of reading and writing in different variable types
+static long my_asub_routine(aSubRecord *precord){
+    // inputs:
+    //     - a: short
+    //     - b: float[]
+    //     - c: int
+    // outputs:
+    //     - vala: float
+    //     - valb: float[]
+    
+    // inputs
+    short inputA = *(short *)precord->a;                     // input scalar
+    epicsFloat32 *inputB_array = (epicsFloat32 *)precord->b; // input array
+    int nob      = precord->nob;                             // nb of element in array (input b)
+    int inputC   = *(epicsUInt32 *)precord->c;
+    
+    // read the whole input array (input b)
+    float val;
+    for (int i=0; i<nbOfElement; i++) {
+        val = *inputB_array++;
+    }
+    // read cell 3 of input array (input b)
+    val = inputB_array[2];    // <=> val = ((epicsFloat32 *)precord->b)[2];
+    
+    // write the whole output array (output b)
+    epicsFloat32 *outputB_array = (epicsFloat32 *)precord->valb;
+    for(int i=0; i < nbOfElement; i++){
+        *outputB_array++ = i;
+    }
+    // write cell 3 of output array (ouput b)
+    outputB_array[2] = 3.14;    // <=> ((epicsFloat32 *)precord->valb)[2] = 3.10;
+    
+    // insert your code here
+    
+    // outputs
+    *(float *)precord->vala = 94.77;
+    precord->nevb           = outsize; // number of output array elements
+    
+    return 0;
+}
+epicsRegisterFunction(my_asub_routine);
+
 // C.E.A. IRFU/SIS/LDISC
 //
 // signalProcessingLib.c

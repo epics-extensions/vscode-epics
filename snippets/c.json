@@ -31,6 +31,7 @@
             "    float val;",
             "    for (int i=0; i<nbOfElement; i++) {",
             "        val = *inputB_array++;",
+            "    }",
             "    // read cell 3 of input array (input b)",
             "    val = inputB_array[2];    // <=> val = ((epicsFloat32 *)precord->b)[2];",
             "    ",
