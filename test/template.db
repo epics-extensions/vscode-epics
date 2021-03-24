@@ -1,13 +1,12 @@
 # file: template.db
-# description: this file is doing that ...
 # author: victor.nadot@cea.fr
 # company: CEA / DRF / IRFU / LDISC
+# description: this file is doing that ...
 # macros:
 # - >> Mandatory
-# - P: ${P=CEA:} |  PV prefix
+# - P: ${P=CEA:} | PV prefix
 # - >> Optional
 # - 
-
 
 field(HIHI, "float")
 field(HIGH, "float")

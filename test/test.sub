@@ -1,14 +1,12 @@
 # file: test.sub
-# description: this file is doing that ...
 # author: victor.nadot@cea.fr
 # company: CEA / DRF / IRFU / LDISC
+# description: this file is doing that ...
 # macros:
 # - >> Mandatory
-# - P: ${P=CEA:} | PV prefix
+# - ererer: ${ererer=CEA:} | PV prefix
 # - >> Optional
 # - 
-
-
 
 file db/myDBfile.template {
     { P=xxx, Y=yyy}

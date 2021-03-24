@@ -19,9 +19,9 @@
     "header": {
         "prefix": "epics.header",
         "body": [   "# file: ${TM_FILENAME}",
-                    "# description: ${1:this file is doing that ...}",
-                    "# author: ${2:victor.nadot@cea.fr}",
-                    "# company: ${3:CEA / DRF / IRFU / LDISC}",
+                    "# author: ${1:victor.nadot@cea.fr}",
+                    "# company: ${2:CEA / DRF / IRFU / LDISC}",
+                    "# description: ${3:this file is doing that ...}",
                     "# macros:",
                     "# - >> Mandatory",
                     "# - ${4:P}: ${${4:P}=${5:CEA:}} | ${6:PV prefix}",
