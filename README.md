@@ -62,29 +62,7 @@ Every field types are not recognized yet, only the more commons.
 
 - Snippets are mainly coming from [language-epics](https://github.com/mmllski/language-epics) Atom plugin, [agaget](https://github.com/agaget) and [vnadot](https://github.com/vnadot).
 - get all the fields of the EPICS database trick is coming from [atzvetkov](https://gitlab.com/stephane.tzvetkov)
-
-
 - should add contributor names here (todo)
 
-add Stephane (https://gitlab.com/stephane.tzvetkov)
-"*.db*": to select .dbd and .dbd.pod files
-- get all the fields of the EPICS database:
-  - commun:   ```cat <path_to_epics-base>/src/ioc/db/*.db*  | grep 'field(' | tr "(," " " | awk '{print $2}' | tr "\n" "|" | sed 's/.$//'```
-  - specific: ```cat <path_to_epics-base>/src/std/rec/*.db* | grep 'field(' | tr "(," " " | awk '{print $2}' | tr "\n" "|" | sed 's/.$//'```
-  - sscan:    ```cat <path_to_scanApp>/*.db*                | grep 'field(' | tr "(," " " | awk '{print $2}' | tr "\n" "|" | sed 's/.$//'```
-
-
 ## to do
-- [issues](https://github.com/NSenaud/vscode-epics/issues)
-- weTest:
-  - new scheme
-  - add field value to snippet test
-- add CP or PP by default ?
-- field to add: OROC, OOPT ...?
-- dtyp: asy32..
-- ai: lopr hopr...
-- ai ao: add alarms
-- mbbi alarms
-- raw soft channel vs soft channel
-- add conversion field: LINR, RVAL, ROFF, EGUF, EGUL, AOFF, ASLO, ESLO, EOFF
-- use "${3|one,two,three|}" for choice and not eg. ${1:NO_ALARM }${2:MINOR }${3:MAJOR}
+- [issues](https://github.com/epics-extensions/vscode-epics/issues)
