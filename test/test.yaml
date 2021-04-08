@@ -1,11 +1,99 @@
+# file: test.yaml
+# author: victor.nadot@cea.fr
+# company: CEA / DRF / IRFU / LDISC
+# description: this file is doing that ...
+# macros:
+# - >> Mandatory
+# - P: ${P} | PV prefix
+# - >> Optional
+# - EGU: ${EGU=Volts} | PV unit
 
+version: {major: 1, minor: 2, bugfix: 0}
 
-commands:
-    - name:      "set voltage"
-      setter:    "VolS"
-      getter:    "VolMes"
-      margin:    0 # %
-      set_value: 10
-      get_value: 10
+include:
+   # without macro
+   - myScript.yaml
+   # with macro on one line
+   - ['myScript.yaml', MACRO1: 'MY_MACRO1, MACRO2: 'MY_MACRO2']
+   # with macro on several lines
+   - path: myScript.yaml
+     MACRO1: 'MY_MACRO1'
+     MACRO2: 'MY_MACRO2'
 
-      
+macros:
+  - MACRO1: MY_MACRO1
+    MACRO2: MY_MACRO2
+
+config:
+  name:        my_scenario_name 
+  type:        unit functional 
+  prefix:      CEA-01:  # PV prefix
+  use_prefix:  False True 
+  delay:       1 # sec
+  ignore:      False True 
+  skip:        False True 
+  on_failure:  continue pause abort 
+  retry:       
+  
+tests:
+  - name:              my_sub_test
+    prefix:            CEA-01:...
+    use_prefix:        False True
+    delay:             1 # sec
+    message:           my_message
+    setter:            USet
+    getter:            UMes
+    margin:            0 # %
+    delta:             0
+
+    # choose between range, values and commands
+    # range
+    range:
+      start:           -5
+      stop:            10
+      # choose between step, lin and geom
+      step:            0.3
+      lin:             5 # number of values linearly spaced between start and stop
+      geom:            3 # number of values geometrically spaced between start and stop
+      include_start:   False True
+      include_stop:    False True
+      sort:            True False random reverse
+
+    # values (2 ways to define them)
+    # one line
+    values: [1, 10, 100]
+    # several lines
+    values:
+      - 1
+      - 10
+      - 100
+
+    # commands
+    commands:
+      # commande 1
+      - name:          command_name
+        message:       my_message
+        margin:        0 # %
+        delta:         0
+        setter:        USet
+        getter:        UMes
+        get_value:     20 # if setter and getter have different values
+        set_value:     20 # if setter and getter have different values
+        value:         20 # if setter and getter have the same value
+        delay:         0 # sec
+        ignore:        False True
+        skip:          False True
+        on_failure:    continue pause abort
+        retry:         5
+      # commande 2
+      - name: ... # command 2
+      # commande 3
+      - name: ... # command 3
+
+    finally:
+      setter:          USet
+      value:           0 # %
+    ignore:        False True
+    skip:          False True
+    on_failure:    continue pause abort
+    retry:         0

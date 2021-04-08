@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.1.0 - 2020-04-17
+- fix current headers and add others (C, SNL, CMD, dbd, yaml)
+
 ## 1.0.0 - 2020-03-19
 - Add defaut value to macro for epicsEnvSet(). Improve dbLoadTemplate and dbLoadRecords.
 - add ${0} at the end of each snippets.

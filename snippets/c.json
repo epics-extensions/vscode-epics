@@ -174,5 +174,13 @@
             "}",
             "${0}"
         ]
+    },
+    "header": {
+        "prefix": "epics.header",
+        "body": [   "// file: ${TM_FILENAME}",
+                    "// author: ${1:victor.nadot@cea.fr}",
+                    "// company: ${2:CEA / DRF / IRFU / LDISC}",
+                    "// description: ${3:this file is doing that ...}",
+                    "${0}"]
     }
 }

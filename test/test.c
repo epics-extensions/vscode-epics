@@ -1,3 +1,9 @@
+// file: test.c
+// author: victor.nadot@cea.fr
+// company: CEA / DRF / IRFU / LDISC
+// description: this file is doing that ...
+
+
 epicsInt8
 epicsUInt8
 epicsInt16

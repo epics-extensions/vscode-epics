@@ -4,9 +4,9 @@
 # description: this file is doing that ...
 # macros:
 # - >> Mandatory
-# - ererer: ${ererer=CEA:} | PV prefix
+# - P: ${P} | PV prefix
 # - >> Optional
-# - 
+# - EGU: ${EGU=Volts} | PV unit
 
 file db/myDBfile.template {
     { P=xxx, Y=yyy}

@@ -1,12 +1,13 @@
-/*
- * C.E.A. IRFU/SIS/LDISC
- *
- * $Id$
- *
- * who       when      what
- * --------  --------  ----------------------------------------------
- * agaget  15/04/16  created
- */
+// file: testSeq.st
+// author: victor.nadot@cea.fr
+// company: CEA / DRF / IRFU / LDISC
+// description: this file is doing that ...
+// macros:
+// - >> Mandatory
+// - P: ${P} | PV prefix
+// - >> Optional
+// - EGU: ${EGU=Volts} | PV unit
+
 
 program LaunchSeq
 

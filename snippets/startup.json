@@ -14,5 +14,13 @@
     "dbLoadRecords": {
         "prefix": "epics.dbLoadRecords",
         "body": "dbLoadRecords(\"${1:file}.${2|template,db|}\", \"${3:P=$(P=CEA:)}, ${4:R=$(P=LAB:)}\")${0}"
+    },
+    "header": {
+        "prefix": "epics.header",
+        "body": [   "# file: ${TM_FILENAME}",
+                    "# author: ${1:victor.nadot@cea.fr}",
+                    "# company: ${2:CEA / DRF / IRFU / LDISC}",
+                    "# description: ${3:this file is doing that ...}",
+                    "${0}"]
     }
 }

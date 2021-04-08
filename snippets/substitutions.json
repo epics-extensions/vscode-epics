@@ -24,9 +24,9 @@
                     "# description: ${3:this file is doing that ...}",
                     "# macros:",
                     "# - >> Mandatory",
-                    "# - ${4:P}: ${${4:P}=${5:CEA:}} | ${6:PV prefix}",
+                    "# - ${4:P}: ${${4:P}} | ${5:PV prefix}",
                     "# - >> Optional",
-                    "# - ",
+                    "# - ${6:EGU}: ${${6:P}=${7:Volts}} | ${8:PV unit}",
                     "${0}"]
     }
 }
