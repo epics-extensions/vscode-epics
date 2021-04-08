@@ -63,3 +63,19 @@ record(ao, "record_name") {
     field(DRVL, "+10")
     field(VAL,  "0")
 }
+
+record(longin, "record_name") {
+    field(DESC, "description")
+    field(LOPR, "5")
+    field(HOPR, "100")
+    field(EGU,  "Volts")
+    field(INP,  "INLINK")
+}
+
+record(longout, "record_name") {
+    field(DESC, "description")
+    field(DRVL, "5")
+    field(DRVH, "100")
+    field(EGU,  "Volts")
+    field(OUT,  "OUTLINK")
+}

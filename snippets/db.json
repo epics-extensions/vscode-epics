@@ -378,6 +378,25 @@
                     "# - >> Optional",
                     "# - ${6:EGU}: ${${6:P}=${7:Volts}} | ${8:PV unit}",
                     "${0}"]
-    }
+    },
+    "long output": {
+        "prefix": "epics.record.longout",
+        "body": [   "record(longout, \"${1:record_name}\") {",
+                    "    field(DESC, \"${2:description}\")",
+                    "    field(DRVL, \"${3:5}\")",
+                    "    field(DRVH, \"${4:100}\")",
+                    "    field(EGU,  \"${5:Volts}\")",
+                    "    field(OUT,  \"${6:OUTLINK}\")",  
+                    "}${0}"]
+    },
+    "long input": {
+        "prefix": "epics.record.longin",
+        "body": [   "record(longin, \"${1:record_name}\") {",
+                    "    field(DESC, \"${2:description}\")",
+                    "    field(LOPR, \"${3:5}\")",
+                    "    field(HOPR, \"${4:100}\")",
+                    "    field(EGU,  \"${5:Volts}\")",
+                    "    field(INP,  \"${6:INLINK}\")", 
+                    "}${0}"]
     }
 }

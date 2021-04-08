@@ -2,6 +2,7 @@
 
 ## 1.1.0 - 2020-04-17
 - fix current headers and add others (C, SNL, CMD, dbd, yaml)
+- add longout and longin snippets
 
 ## 1.0.0 - 2020-03-19
 - Add defaut value to macro for epicsEnvSet(). Improve dbLoadTemplate and dbLoadRecords.
