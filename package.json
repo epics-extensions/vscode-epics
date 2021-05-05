@@ -14,7 +14,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:NSenaud/vscode-epics.git"
+		"url": "git@github.com:epics-extensions/vscode-epics.git"
 	},
 	"categories": [
 		"Programming Languages",
