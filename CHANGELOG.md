@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.2.0 - xxxx-xx-xx
+- remove link to old github module and update it to epics-extensions github
+- use selector for choices issue #44
+  
 ## 1.1.0 - 2020-04-17
 - fix current headers and add others (C, SNL, CMD, dbd, yaml)
 - add longout and longin snippets

@@ -40,7 +40,7 @@
     }, 
     "scan field": {
         "prefix": "epics.field.scan",
-        "body": "field(SCAN, \"${1:.1 second }${2:.2 second }${3:1 second }${4:10 second }${5:I/O Intr }${6:Event }${7:Passive}\")${0}"
+        "body": "field(SCAN, \"${1|.1 second,.2 second,.5 second,1 second,2 second,5 second,10 second,I/O Intr,Event,Passive|}\")${0}"
     }, 
     "input link field": {
         "prefix": "epics.field.inp",
@@ -52,7 +52,7 @@
     }, 
     "dtyp field": {
         "prefix": "epics.field.dtyp",
-        "body": "field(DTYP, \"${1:Soft Channel }${2:stream}\")${0}"
+        "body": "field(DTYP, \"${1|Soft Channel,stream|}\")${0}"
     }, 
     "dol field": {
         "prefix": "epics.field.dol",
@@ -60,11 +60,11 @@
     }, 
     "selection mechanism field": {
         "prefix": "epics.field.selm",
-        "body": "field(SELM, \"${1:All }${2:Specified }${3:Mask}\")${0}"
+        "body": "field(SELM, \"${1|All,Specified,Mask|}\")${0}"
     }, 
     "omsl field": {
         "prefix": "epics.field.omsl",
-        "body": "field(OMSL, \"${1:Supervisory }${2:closed_loop}\")${0}"
+        "body": "field(OMSL, \"${1|Supervisory,closed_loop|}\")${0}"
     }, 
     "hihi alarm limit field": {
         "prefix": "epics.field.hihi",
@@ -84,31 +84,31 @@
     }, 
     "hihi alarm severity field": {
         "prefix": "epics.field.hhsv",
-        "body": "field(HHSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR}\")${0}"
+        "body": "field(HHSV, \"${1|NO_ALARM,MINOR,MAJOR|}\")${0}"
     }, 
     "high alarm severity field": {
         "prefix": "epics.field.hsv",
-        "body": "field(HSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR}\")${0}"
+        "body": "field(HSV, \"${1|NO_ALARM,MINOR,MAJOR|}\")${0}"
     }, 
     "low alarm severity field": {
         "prefix": "epics.field.lsv",
-        "body": "field(LSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR}\")${0}"
+        "body": "field(LSV, \"${1|NO_ALARM,MINOR,MAJOR|}\")${0}"
     }, 
     "lolo alarm severity field": {
         "prefix": "epics.field.llsv",
-        "body": "field(LLSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR}\")${0}"
+        "body": "field(LLSV, \"${1|NO_ALARM,MINOR,MAJOR|}\")${0}"
     }, 
     "zsv alarm severity field": {
         "prefix": "epics.field.zsv",
-        "body": "field(ZSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR}\")${0}"
+        "body": "field(ZSV, \"${1|NO_ALARM,MINOR,MAJOR|}\")${0}"
     }, 
     "osv alarm severity field": {
         "prefix": "epics.field.osv",
-        "body": "field(OSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR}\")${0}"
+        "body": "field(OSV, \"${1|NO_ALARM,MINOR,MAJOR|}\")${0}"
     }, 
     "cosv alarm severity field": {
         "prefix": "epics.field.cosv",
-        "body": "field(COSV, \"${1:NO_ALARM }${2:MINOR }${3:MAJOR}\")${0}"
+        "body": "field(COSV, \"${1|NO_ALARM,MINOR,MAJOR|}\")${0}"
     }, 
     "alarm deadband field": {
         "prefix": "epics.field.hyst",
@@ -120,22 +120,22 @@
                     "field(HIGH, \"${2:float}\")",
                     "field(LOW,  \"${3:float}\")",
                     "field(LOLO, \"${4:float}\")",
-                    "field(HHSV, \"${5:NO_ALARM }${6:MINOR }${7:MAJOR}\")",
-                    "field(HSV,  \"${8:NO_ALARM }${9:MINOR }${10:MAJOR}\")",
-                    "field(LSV,  \"${11:NO_ALARM }${12:MINOR }${13:MAJOR}\")",
-                    "field(LLSV, \"${14:NO_ALARM }${15:MINOR }${16:MAJOR}\")",
-                    "field(ZSV,  \"${17:NO_ALARM }${18:MINOR }${19:MAJOR}\")",
-                    "field(OSV,  \"${20:NO_ALARM }${21:MINOR }${22:MAJOR}\")",
-                    "field(COSV, \"${23:NO_ALARM }${24:MINOR }${25:MAJOR}\")",
-                    "field(HYST, \"${28:double}\")${0}"]
+                    "field(HHSV, \"${5|NO_ALARM,MINOR,MAJOR|}\")",
+                    "field(HSV,  \"${6|NO_ALARM,MINOR,MAJOR|}\")",
+                    "field(LSV,  \"${7|NO_ALARM,MINOR,MAJOR|}\")",
+                    "field(LLSV, \"${8|NO_ALARM,MINOR,MAJOR|}\")",
+                    "field(ZSV,  \"${9|NO_ALARM,MINOR,MAJOR|}\")",
+                    "field(OSV,  \"${10|NO_ALARM,MINOR,MAJOR|}\")",
+                    "field(COSV, \"${11|NO_ALARM,MINOR,MAJOR|}\")",
+                    "field(HYST, \"${12:double}\")${0}"]
     },
   
     "analog input": {
         "prefix": "epics.record.ai",
         "body": [   "record(ai, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
-                    "    field(DTYP, \"${3:Soft Channel }${4:stream}\")",
-                    "    field(SCAN, \"${5:.1 second }${6:1 second }${7:I/O Intr }${8:Event }${9:Passive}\")",
+                    "    field(DTYP, \"${3|Soft Channel,stream|}\")",
+                    "    field(SCAN, \"${4|.1 second,.2 second,.5 second,1 second,2 second,5 second,10 second,I/O Intr,Event,Passive|}\")",
                     "    field(INP,  \"${10:input link}\")",
                     "}${0}"]
     },
@@ -147,7 +147,7 @@
                     "    field(EGU,  \"${4:Volts}\")",
                     "    field(DRVL, \"${5:-10}\")",
                     "    field(DRVH, \"${6:+10}\")",
-                    "    field(VAL,  \"${7:0.000}\")",    
+                    "    field(VAL,  \"${7:0.000}\")", 
                     "}${0}"]
     },
     "binary input": {
@@ -155,9 +155,9 @@
         "body": [   "record(bi, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
                     "    field(VAL,  \"${3:value}\")",
-                    "    field(ZNAM, \"${4:zero_name}\")    field(ZSV, \"${5:NO_ALARM }${6:MINOR }${7:MAJOR}\")",
-                    "    field(ONAM, \"${8:one_name}\")     field(OSV, \"${9:NO_ALARM }${10:MINOR }${11:MAJOR}\")",
-                    "    field(INP,  \"${12:input link}\")",
+                    "    field(ZNAM, \"${4:zero_name}\")    field(ZSV, \"${5|NO_ALARM,MINOR,MAJOR|}\")",
+                    "    field(ONAM, \"${6:one_name}\")     field(OSV, \"${7|NO_ALARM,MINOR,MAJOR|}\")",
+                    "    field(INP,  \"${8:input link}\")",
                     "}${0}"]
     },
     "binary output": {
@@ -165,10 +165,10 @@
         "body": [   "record(bo, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
                     "    field(VAL,  \"${3:value}\")",   
-                    "    field(ZNAM, \"${4:zero_name}\")    field(ZSV, \"${5:NO_ALARM }${6:MINOR }${7:MAJOR}\")", 
-                    "    field(ONAM, \"${8:one_name}\")     field(OSV, \"${9:NO_ALARM }${10:MINOR }${11:MAJOR}\")",
-                    "    field(HIGH, \"${12:seconds_to_hold_high_state}\")",
-                    "    field(OUT,  \"${13:output link}\")",
+                    "    field(ZNAM, \"${4:zero_name}\")    field(ZSV, \"${5|NO_ALARM,MINOR,MAJOR|}\")", 
+                    "    field(ONAM, \"${6:one_name}\")     field(OSV, \"${7|NO_ALARM,MINOR,MAJOR|}\")",
+                    "    field(HIGH, \"${8:seconds_to_hold_high_state}\")",
+                    "    field(OUT,  \"${9:output link}\")",
                     "}${0}"]
     },
     "aSub Record": {
@@ -177,11 +177,11 @@
                     "    field(DESC, \"${2:description}\")",
                     "    field(SNAM, \"${3:my_asub_routine}\")",
                     "    field(INPA, \"${4:record_name}\")",
-                    "    field(FTA,  \"${5:STRING }${6:CHAR }${7:UCHAR }${8:SHORT }${9:USHORT }${10:LONG }${11:ULONG }${12:FLOAT }${13:DOUBLE }${14:ENUM}\")",
-                    "    field(NOA,  \"${15:number_of_element}\")",
-                    "    field(OUTA, \"${16:record_name}\")",
-                    "    field(FTVA, \"${17:STRING }${18:CHAR }${19:UCHAR }${20:SHORT }${21:USHORT }${22:LONG }${23:ULONG }${24:FLOAT }${25:DOUBLE }${26:ENUM}\")",
-                    "    field(NOVA, \"${27:number_of_element}\")",
+                    "    field(FTA,  \"${5|STRING,CHAR,UCHAR,SHORT,USHORT,LONG,ULONG,FLOAT,DOUBLE,ENUM|}\")",
+                    "    field(NOA,  \"${6:number_of_element}\")",
+                    "    field(OUTA, \"${7:record_name}\")",
+                    "    field(FTVA, \"${8|STRING,CHAR,UCHAR,SHORT,USHORT,LONG,ULONG,FLOAT,DOUBLE,ENUM|}\")",
+                    "    field(NOVA, \"${9:number_of_element}\")",
                     "}${0}"]
     }, 
     "calculation": {
@@ -210,14 +210,14 @@
                     "    field(OUTA, \"${3:record_name}\")",
                     "    field(OUTB, \"${4:record_name}\")",
                     "    field(DOL,  \"${5:record_name}\")",
-                    "    field(OMSL, \"${6:supervisory }${7:closed_loop}\")",
+                    "    field(OMSL, \"${6|supervisory,closed_loop|}\")",
                     "}${0}"]
     }, 
     "fanout": {
         "prefix": "epics.record.fanout",
         "body": [   "record(fanout, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
-                    "    field(SELM, \"${3:All }${4:Specified }${5:Mask}\")",
+                    "    field(SELM, \"${3|All,Specified,Mask|}\")",
                     "    field(SELN, \"${6:1}\")",
                     "    field(SELL, \"${7:record_name}\")",
                     "    field(LNK1, \"${8:record_name}\")",
@@ -228,7 +228,7 @@
         "prefix": "epics.record.sel",
         "body": [   "record(sel, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
-                    "    field(SELM, \"${3:All }${4:Specified }${5:Mask}\")",
+                    "    field(SELM, \"${3|All,Specified,Mask|}\")",
                     "    field(SELN, \"${6:1}\")",
                     "    field(SELL, \"${7:record_name}\")",
                     "    field(INPA, \"${8:record_name}\")",
@@ -240,7 +240,7 @@
         "prefix": "epics.record.seq",
         "body": [   "record(seq, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
-                    "    field(SELM, \"${3:All }${4:Specified }${5:Mask}\")",
+                    "    field(SELM, \"${3|All,Specified,Mask|\")",
                     "    field(SELN, \"${6:1}\")",
                     "    field(SELL, \"${7:record_name}\")",
                     "    field(DLY1, \"${8:double}\")",
@@ -355,7 +355,7 @@
         "prefix": "epics.record.stringin",
         "body": [   "record(stringin, \"${1:record_name}\") {",
                     "    field(DESC, \"${2:description}\")",
-                    "    field(DTYP, \"${3:Soft Channel }${4:stream}\")",
+                    "    field(DTYP, \"${3|Soft Channel,stream|}\")",
                     "    field(INP,  \"${5:input_link}\")",
                     "}${0}"]
     },
