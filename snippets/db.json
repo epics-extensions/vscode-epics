@@ -34,8 +34,8 @@
         "prefix": "epics.field.pini",
         "body": "field(PINI, \"${1:YES }${2:NO}\")${0}"
     }, 
-    "fwd link field": {
-        "prefix": "epics.field.fwd",
+    "forward link field": {
+        "prefix": "epics.field.flnk",
         "body": "field(FLNK, \"${1:record_name}\")${0}"
     }, 
     "scan field": {
