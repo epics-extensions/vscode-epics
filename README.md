@@ -62,7 +62,11 @@ Every field types are not recognized yet, only the more commons.
 
 - Snippets are mainly coming from [language-epics](https://github.com/mmllski/language-epics) Atom plugin, [agaget](https://github.com/agaget) and [vnadot](https://github.com/vnadot).
 - get all the fields of the EPICS database trick is coming from [atzvetkov](https://gitlab.com/stephane.tzvetkov)
-- should add contributor names here (todo)
+- thanks to the contributors:  
+  - [Ivo Hanak](https://github.com/hanak) from Institute of Plasma Physics (IPP CAS)
+  - [Jeong Han Lee](https://github.com/jeonghanlee) from the European Spallation Source ERIC (ESS)
+  - [Jeremy L.](https://github.com/JJL772) from Stanford Linear Accelerator Center (SLAC)
+  - [TimGuiteDiamond](https://github.com/TimGuiteDiamond) from the Diamond Light Source (DLS)
 
 ## to do
 - [issues](https://github.com/epics-extensions/vscode-epics/issues)
