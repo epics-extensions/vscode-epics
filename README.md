@@ -78,10 +78,11 @@ $ cat <path_to_epics-base>/src/std/rec/*.db* | grep 'field(' | tr "(," " " | awk
   6. create a package with vse: `$ vsce package # generate vsix file`
   7. create the git tag: `git tag -a x.x.x -m "..."`
   8. push to server `git push origin --tags`
-  9. publish the extension on the vscode marketplace (rights are limited to @nsd and @vnadot)
+  9. [on github](https://github.com/epics-extensions/vscode-epics), create a new release
+  10. publish the extension on the vscode marketplace (rights are limited to @nsd and @vnadot)
      1.  [manually](https://marketplace.visualstudio.com/manage/publishers/nsd?noPrompt=true)
      2.  via [CLI](https://code.visualstudio.com/api/working-with-extensions/publishing-extension). I didn't manage to make it work yet, issue with the token "requires an Personal Access Token").
-  10. post a message on the EPICS [techtalk)[https://epics.anl.gov/tech-talk/2020/msg01930.php]. You can do that by answering by email.
+  11. post a message on the EPICS [techtalk)[https://epics.anl.gov/tech-talk/2020/msg01930.php]. You can do that by answering by email.
 
 ## 7. create a gif for the documentation
 https://github.com/phw/peek
