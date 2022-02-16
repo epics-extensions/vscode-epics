@@ -9,12 +9,12 @@
 # - EGU: ${EGU=Volts} | PV unit
 
 file db/myDBfile.template {
-    { P=xxx, Y=yyy}
-    { P=aaa, Y=bbb}
+    pattern { PREFIX SCAN }
+            { "${P}" "1 second"}
+            { "${P}" "3 second"}
 }
 
 file db/myDBfile.template {
-    pattern { PREFIX,     SCAN }
-            { ${ PREFIX } "1 second"}
-            { ${ PREFIX } "3 second"}
+    { P=xxx, Y=yyy}
+    { P=aaa, Y=bbb}
 }

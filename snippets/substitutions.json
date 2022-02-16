@@ -2,9 +2,9 @@
     "include-pattern": {
         "prefix": "epics.substitutions.file.pattern",
         "body": [   "file db/myDBfile.template {",
-                    "    pattern { PREFIX,     SCAN }",
-                    "            { ${ PREFIX } \"1 second\"}",
-                    "            { ${ PREFIX } \"3 second\"}",
+                    "    pattern { PREFIX SCAN }",
+                    "            { \"\\${P}\" \"1 second\"}",
+                    "            { \"\\${P}\" \"3 second\"}",
                     "}${0}"
                 ]
     },
